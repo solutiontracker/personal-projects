@@ -1,0 +1,27 @@
+{
+  "name": "nativebase-universal-starter-kit",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "application"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-native": "^0.71.3",
+    "@types/react-slick": "^0.23.13",
+    "eslint": "^8.35.0",
+    "react-verification-code-input": "^1.2.9",
+    "turbo": "^1.8.2",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "native": "cd apps/expo && expo start",
+    "native:web": "cd apps/expo && expo web",
+    "web": "cd apps/next && yarn next",
+    "web:build": "cd apps/next && yarn build",
+    "web:start": "cd apps/next && yarn start -p 3001"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.39"
+  }
+}

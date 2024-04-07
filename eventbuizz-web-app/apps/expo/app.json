@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Web app",
+    "slug": "web-app",
+    "version": "1.0.0",
+    "scheme": "web-app",
+    "jscEnabled": true,
+    "platforms": ["ios", "android", "web"],
+    "ios": {
+      "bundleIdentifier": "47U374K265"
+    },
+    "android": {
+      "package": "com.solito.blank",
+      "useNextNotificationsApi": true,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBEsB6XW-gkDRxOrEjIBUs81f-SC2gCuxQ"
+        }
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e20c716f-c438-4e50-b1de-7bc33c176c4b"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "flipper": true
+          }
+        }
+      ]
+    ],
+    "webview": {
+      "config": {
+        "experimentalTaggedText": true
+      }
+    }
+  }
+}
