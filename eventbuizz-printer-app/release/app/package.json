@@ -1,0 +1,18 @@
+{
+  "name": "eventbuizz-printer",
+  "version": "1.0.9",
+  "description": "A foundation for scalable desktop apps",
+  "main": "./dist/main/main.js",
+  "author": {
+    "name": "Eventbuizz",
+    "url": "https://www.eventbuizz.com"
+  },
+  "scripts": {
+    "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts",
+    "postinstall": "npm run electron-rebuild && npm run link-modules"
+  },
+  "dependencies": {
+  },
+  "license": "MIT"
+}

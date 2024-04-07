@@ -1,0 +1,24 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+.sample-canvas,
+.canvas-container {
+  width: 100%;
+  /* max-width: 660px; */
+  height: 100%;
+  background: #fff;
+}
+.sample-canvas canvas {
+  height: 100%;
+}
+#textblock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+}
