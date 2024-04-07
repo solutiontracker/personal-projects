@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #Twitter feed
+   ========================================================================== */
+.edgtf-twitter-widget li {
+    margin-bottom: 15px;
+}
+
+.edgtf-twitter-widget .edgtf-tweet-time {
+    margin-top: 7px;
+}
+
+.edgtf-twitter-slider{
+        text-align: center;
+
+    .twitter-icon{
+        font-size: 40px;
+        margin-bottom: 50px;
+        display: block;
+
+    }
+
+    .edgtf-twitter-slider-inner{
+        margin-top:55px;
+        padding: 0 20px;
+
+        .edgtf-twitter-slider-item{
+            font-size: 18px;
+
+            a{
+                color:#fff;
+                @include edgtfTransition(color .1s ease-in-out);
+                &:hover{
+                    color:$second-main-color;
+                }
+            }
+        }
+    }
+}

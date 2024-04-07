@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Shop masonry responsive start style
+   ========================================================================== */
+
+.edgtf-shop-masonry {
+
+	.edgtf-shop-list-masonry-grid-sizer,
+	.edgtf-shop-product {
+		@include ipad-landscape {
+			width: 50%;
+		}
+		@include phone-landscape {
+			width: 100%;
+		}
+	}
+
+	.edgtf-large-width-masonry-item,
+	.edgtf-large-width-height-masonry-item {
+		@include ipad-landscape {
+			width: 100%;
+		}
+		@include phone-landscape {
+			width: 100%;
+		}
+	}
+}
+/* ==========================================================================
+   End of Shop masonry responsive style
+   ========================================================================== */

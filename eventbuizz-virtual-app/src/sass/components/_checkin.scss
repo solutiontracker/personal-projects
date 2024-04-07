@@ -1,0 +1,135 @@
+#app-checkinwrapp {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px 15px;
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  .app-btn-back {
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    background: $white;
+    padding: 5px 14px 5px 10px;
+    border-radius: 20px;
+    color: $dark;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: 600;
+    span {
+      font-size: 18px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .app-checkin-card {
+    border-radius: 20px;
+    background: $white;
+    padding-top: 52px;
+    box-shadow: 0 0 10px rgba($black,0.47);
+    position: relative;
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      background: $black;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 20px;
+    }
+    h2 {
+      padding: 0 12px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 1.2;
+      color: $dark;
+      font-weight: 700;
+      span {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        min-width: 100px;
+        min-height: 28px;
+      }
+      &.active {
+        span {
+          &::after {
+            content: url(../images/arrowtick.png);
+            position: absolute;
+            left: 102%;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .app-client-info {
+      padding: 0 12px;
+      margin-bottom: 10px;
+      .app-name {
+        font-size: 18px;
+        font-weight: 400;
+        padding-bottom: 4px;
+        color: $dark;
+        line-height: 1.2;
+      }
+      .app-title {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $dark;
+      }
+    }
+    .app-dragqrcodearea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white;
+      border-radius: 20px;
+      margin: 0 12px 10px;
+      height: 116px;
+      border: 2px dashed #459F30;
+    }
+    .app-checkinhistory {
+      background: #459F30;
+      height: 100%;
+      border-radius: 20px;
+      color: $white;
+      padding: 20px 12px;
+      overflow: auto;
+      height: 300px;
+      h3 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+          margin-bottom: 10px;
+          font-size: 0;
+          span {
+            display: inline-block;
+            font-size: 14px;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .app-dragbar {
+    width: 100%;
+    text-align: center;
+  }
+}
+.app-empty-area {
+  padding-top: 180px;
+}

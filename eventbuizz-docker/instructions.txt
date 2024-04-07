@@ -1,0 +1,6 @@
+
+composer update both projects aws and api
+git hub token: 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
+copy env files in relevant projects
+copy app_env.php to aws/bootstrap
+php artisan db:seed all

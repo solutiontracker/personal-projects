@@ -1,0 +1,294 @@
+/* ==========================================================================
+# Title area style - start
+========================================================================== */
+
+@include keyframes(title-animation-from-right) {
+    0% {
+        opacity: 0;
+        transform: translate(50%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@include keyframes(title-animation-from-left) {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+
+
+.edgtf-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
+    text-align: left;
+    position: relative;
+    z-index: 101;
+    background-color: #f8f8f8;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    &.edgtf-has-parallax-background{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 101;
+    }
+
+    &.edgtf-content-center-alignment{
+        text-align: center;
+    }
+
+    &.edgtf-content-right-alignment{
+        text-align: right;
+    }
+
+    &.edgtf-animation-right-left{
+        h1,.edgtf-subtitle span,.edgtf-breadcrumbs-holder{
+            @include animation(title-animation-from-right, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    }
+
+    &.edgtf-animation-left-right{
+        h1,.edgtf-subtitle span,.edgtf-breadcrumbs-holder{
+            @include animation(title-animation-from-left, 0.5s, 1, cubic-bezier(0.175, 0.885, 0.320, 1.275), 1s);
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    }
+
+    &.edgtf-has-responsive-background{
+        height: auto !important;
+
+        .edgtf-title-holder {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .edgtf-title-holder .edgtf-container {
+            display: block;
+            height: 100%;
+        }
+
+        .edgtf-title-holder .edgtf-container-inner {
+            display: table;
+            height: 100%;
+        }
+
+        .edgtf-title-holder .edgtf-title-subtitle-holder {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+    }
+
+
+    .edgtf-title-image {
+
+        img {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+
+    }
+
+    &.edgtf-title-image-not-responsive {
+
+        .edgtf-title-image{
+            display: none;
+        }
+
+    }
+
+    .edgtf-title-holder {
+        display: table;
+        height: 100%;
+        position: relative;
+        width: 100%;
+
+        .edgtf-container {
+            background-color: transparent;
+            display: table-row;
+            vertical-align: middle;
+        }
+
+        .edgtf-container-inner {
+            display: table-cell;
+            padding: 0 !important;
+            vertical-align: middle;
+        }
+
+        .edgtf-title-subtitle-holder {
+            display: block;
+            padding: 0;
+            position: relative;
+            z-index: 25;
+        }
+
+        .edgtf-title-subtitle-holder-inner {
+            position: relative; //because of the breadcrumbs (absolute position) on standard type title
+        }
+
+        /* #Standard title - start
+        ========================================================================== */
+
+        h1 {
+            display: inline-block;
+            vertical-align: middle;
+	        font-size: 33px;
+        }
+
+        h1 span{
+            display: inline-block;
+        }
+
+        .edgtf-subtitle{
+            display: block;
+            font-size: 22px;
+            line-height: 1.2em;
+            font-weight: 400;
+            color: #333;
+			margin-top: 4px;
+
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        /* #Standard title - end
+        ========================================================================== */
+
+        /* #Breadcrumb title - start
+        ========================================================================== */
+
+        .edgtf-breadcrumbs-holder{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .edgtf-breadcrumbs a, .edgtf-breadcrumbs span{
+            color: #000;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1em;
+            display: inline-block;
+            vertical-align: middle;
+			text-transform: lowercase;
+        }
+
+        /* #Breadcrumb title - end
+        ========================================================================== */
+
+
+    }
+
+	&.edgtf-title-with-border {
+		.edgtf-title-holder {
+			.edgtf-container-inner {
+
+			}
+		}
+	}
+
+    &.edgtf-standard-type{
+        .edgtf-breadcrumbs-holder{
+            position: absolute;
+            top: 0;
+            height: 100%;
+
+            .edgtf-breadcrumbs {
+                display: table;
+                height: 100%;
+                width: 100%;
+            }
+
+            .edgtf-breadcrumbs-inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+        }
+    }
+
+    &.edgtf-standard-type.edgtf-content-left-alignment{
+        .edgtf-breadcrumbs-holder {
+            right: 0;
+        }
+    }
+
+    &.edgtf-standard-type.edgtf-content-right-alignment{
+        .edgtf-breadcrumbs-holder {
+            left: 0;
+        }
+    }
+
+    &.edgtf-standard-type.edgtf-content-center-alignment{
+        .edgtf-breadcrumbs-holder {
+            position: relative;
+            top: auto;
+            height: auto;
+            display: block;
+        }
+    }
+    &.edgtf-title-large-text-size {
+
+        h1{
+            font-size: 60px;
+        }
+
+    }
+
+
+	&.edgtf-title-medium-text-size {
+
+		h1{
+			font-size: 35px;
+		}
+
+	}
+	&.edgtf-title-small-text-size {
+
+		h1{
+			font-size: 20px;
+		}
+
+	}
+
+	/* #Separator title - start
+	   ========================================================================== */
+
+	.edgtf-separator {
+		border-bottom-width: 2px;
+		border-bottom-color: $first-main-color;
+		width: 56px;
+		margin-bottom: 0;
+		margin-top: 8px;
+	}
+
+	/* #Separator title - start
+		   ========================================================================== */
+
+
+}
+
+
+/* ==========================================================================
+# Title area style - end
+========================================================================== */

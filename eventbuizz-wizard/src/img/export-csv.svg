@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.169" height="28.773" viewBox="0 0 33.169 28.773">
+  <g id="Group_1875" data-name="Group 1875" transform="translate(-1389.229 -338)">
+    <g id="upload_csv" data-name="upload csv" transform="translate(1384 338)">
+      <g id="download" transform="translate(10.167 9.733)">
+        <g id="Group_1461" data-name="Group 1461" transform="translate(-4.438 3.566)">
+          <path id="Path_476" data-name="Path 476" d="M46,620v11.195a3.784,3.784,0,0,0,3.787,3.78h24.6a3.784,3.784,0,0,0,3.786-3.78v-10.64" transform="translate(-46 -620)" fill="none" stroke="#117093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+        <g id="Group_1823" data-name="Group 1823" transform="translate(17.437 14.34) rotate(180)">
+          <path id="Path_677" data-name="Path 677" d="M12.126,6.063,6.063,0,0,6.063" fill="none" stroke="#117093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="Line_184" data-name="Line 184" x1="0.221" y2="13.904" transform="translate(5.842 0.436)" fill="none" stroke="#117093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="Group_1835" data-name="Group 1835" transform="translate(7 0)">
+        <text id="CSV" transform="translate(0 6)" fill="#117093" font-size="7" font-family="ArialMT, Arial"><tspan x="0" y="0">CSV</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

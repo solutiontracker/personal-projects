@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="50" viewBox="0 0 42 50">
+  <g id="icon" transform="translate(-547.199 -564.199)">
+    <path id="Path_702" data-name="Path 702" d="M-208.3,415.5h28.892l6.909,7.134v36.6a2.235,2.235,0,0,1-2.2,2.27h-33.6a2.235,2.235,0,0,1-2.2-2.27V417.77A2.235,2.235,0,0,1-208.3,415.5Z" transform="translate(759.699 150.699)" fill="none" stroke="#1a7190" stroke-width="4"/>
+    <path id="Path_703" data-name="Path 703" d="M-178.5,415.5V423h7" transform="translate(757.465 152.699)" fill="none" stroke="#1a7190" stroke-width="4"/>
+    <line id="Line_190" data-name="Line 190" x2="22.145" transform="translate(556.959 597.449)" fill="none" stroke="#1a7190" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_191" data-name="Line 191" x2="22.145" transform="translate(556.959 603.449)" fill="none" stroke="#1a7190" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_704" data-name="Path 704" d="M615.206,467.582c-5.533-4.1-10.781,1.778-10.708,7.167s6.71,9.68,10.885,5.977" transform="translate(-44.904 107.084)" fill="none" stroke="#1a7190" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_192" data-name="Line 192" x2="10.424" transform="translate(556.699 579.555)" fill="none" stroke="#117093" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_193" data-name="Line 193" x2="10.424" transform="translate(556.699 583.029)" fill="none" stroke="#117093" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

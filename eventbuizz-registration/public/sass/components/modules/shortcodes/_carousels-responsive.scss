@@ -1,0 +1,10 @@
+@include ipad-portrait{
+  .edgtf-carousel-holder{
+
+    .edgtf-carousel{
+      .edgtf-slick-dots{
+        display: none !important;
+      }
+    }
+  }
+}

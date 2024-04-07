@@ -1,0 +1,709 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+//TODO Delete commented code
+
+/* Side area general style - start
+========================================================================== */
+
+.edgtf-light-header .edgtf-page-header > div:not(.edgtf-sticky-header) .edgtf-side-menu-button-opener,
+.edgtf-light-header.edgtf-header-style-on-scroll .edgtf-page-header .edgtf-side-menu-button-opener,
+.edgtf-light-header .edgtf-top-bar .edgtf-side-menu-button-opener {
+	color: $header-light-color !important; //Color can be set inline from widget opener;
+
+	&:hover{
+		color:$first-main-color!important;
+	}
+}
+
+.edgtf-dark-header .edgtf-page-header > div:not(.edgtf-sticky-header) .edgtf-side-menu-button-opener,
+.edgtf-dark-header.edgtf-header-style-on-scroll .edgtf-page-header .edgtf-side-menu-button-opener,
+.edgtf-dark-header .edgtf-top-bar .edgtf-side-menu-button-opener {
+	color: $header-dark-color !important; //Color can be set inline from widget opener
+}
+
+.edgtf-side-menu-button-opener {
+	font-size: 16px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	@include edgtfTransition(initial);
+	color: $default-text-color;
+}
+
+.edgtf-side-menu-button-opener.medium {
+	display: inline-block;
+	font-size: 24px;
+	line-height: 30px;
+	height: 30px;
+	width: 19px;
+}
+
+.edgtf-side-menu-button-opener.large {
+	display: inline-block;
+	font-size: 30px;
+	line-height: 34px;
+	height: 34px;
+	width: 24px;
+}
+
+.edgtf-side-menu-button-opener > i {
+	display: inline-block;
+	height: inherit;
+	line-height: inherit;
+	vertical-align: bottom;
+	width: inherit;
+	text-align: center;
+	-webkit-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-moz-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-ms-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	-o-transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	transition: opacity 0.15s ease-out, color 0.15s ease-out;
+	font-size: 19px;
+}
+
+.edgtf-side-menu-button-opener:hover {
+	color: $first-main-color;
+}
+
+.edgtf-side-menu-button-opener span.social_icon {
+	font-family: 'ElegantIcons' !important;
+}
+
+.edgtf-side-menu-button-opener i.social_icon {
+	font-family: 'FontAwesome',serif !important;
+
+}
+
+.edgtf-side-menu {
+	background-color: $default-elements-background-color;
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	padding: 30px 50px;
+	position: fixed;
+	top:0;
+	right: -270px;
+	width: 210px;
+	z-index: 9999;
+	-webkit-backface-visibility: hidden;
+
+	h4{
+		margin: 0 0 15px 0;
+		position: relative;
+		padding-bottom: 24px;
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 55px;
+			height: 3px;
+			background-color: #0f58fb;
+		}
+	}
+
+	h5,
+	h6 {
+		margin: 0 0 12px 0;
+		color: #fff;
+	}
+
+	.widget {
+		margin: 0 0 30px;
+
+		li {
+			position:relative;
+			list-style-type: none;
+		}
+
+		ul li.page_item_has_children,
+		ul li.menu-item-has-children{
+			padding-right: 0;
+			border-bottom:none;
+		}
+
+		ul ul {
+			padding: 6px 0 0 10px;
+		}
+
+		a:hover{
+			color:$first-main-color;
+		}
+
+	}
+
+	a:not(.qbutton),
+	li,
+	span,
+	p,
+	.widget_rss li a.rsswidget {
+		color: #9d9d9d;
+		line-height: 31px;
+		@include edgtfTransition(color 0.15s ease-out);
+	}
+
+	.widget {
+		margin-bottom: 30px;
+
+		&:last-child{
+			margin-bottom:0;
+		}
+
+		/* Global widgets style */
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+
+				font-family: $second-font;
+				font-weight: 500;
+				padding-bottom: 4px;
+				padding-top: 4px;
+				padding-left: 20px;
+				position: relative;
+				@include edgtfTransition(color .2s ease-out);
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				a{
+					position:relative;
+					&:before {
+						font-family: ElegantIcons;
+						content: '5';
+						font-size: 12px;
+						position: absolute;
+						left:-20px;
+						color: #525252;
+
+					}
+					&:hover {
+						color: $first-main-color;
+					}
+				}
+
+				&:hover {
+					> a {
+						color: $first-main-color;
+					}
+				}
+
+				ul {
+					padding: 0 0 0 15px;
+				}
+			}
+		}
+
+		a {
+			color: #333;
+		}
+
+		input[type=submit],
+		input[type=text] {
+			-webkit-appearance: none;
+			background: transparent;
+			border: none;
+			outline: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		// search widget input field text
+		&.widget_search{
+			margin-bottom:0;
+			padding-bottom:15px;
+		}
+
+		&.widget_edgtf_instagram_widget{
+
+			.edgtf-instagram-feed{
+
+				li{
+					padding-left: 0;
+					padding-right: 20px;
+				}
+			}
+
+		}
+
+		.edgtf-search-wrapper {
+			position: relative;
+			line-height: normal;
+
+			input[type='text'] {
+				width: 100%;
+				outline: none;
+				border: 1px solid #eaeaea;
+				border-radius: 50px;
+				line-height: 50px;
+				height: 50px;
+				box-sizing: border-box;
+				padding: 0 52px 0 25px;
+				font-size: 16px;
+				font-weight: 600;
+				color: #333;
+				font-family:$second-font;
+			}
+
+			::-webkit-input-placeholder {
+				color: #333;
+				opacity: 1;
+			}
+			:-moz-placeholder {
+				color: #333;
+				opacity: 1;
+			}
+			::-moz-placeholder {
+				color: #333;
+				opacity: 1;
+			}
+			:-ms-input-placeholder {
+				color: #333;
+				opacity: 1;
+			}
+
+			input[type='submit'] {
+				font-family: ElegantIcons;
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				cursor: pointer;
+				font-size: 15px;
+				color: #333;
+			}
+		}
+
+
+		// tag cloud widget
+		.tagcloud a {
+
+			font-family: $second-font;
+			font-size: 14px !important;
+			display: inline-block;
+			margin-right: 3px;
+			margin-bottom: 7px;
+			font-weight: 500;
+			padding: 0 19px;
+			text-transform: capitalize;
+			line-height: 30px;
+			border: 1px solid transparent;
+			border-radius: 32px;
+			@include edgtfTransition(color .2s ease-out);
+			&:hover {
+				color: #000;
+				border-color: #eaeaea;
+			}
+		}
+
+
+		&.widget_archive li {
+			&:hover {
+				color: $first-main-color;
+			}
+		}
+
+		//recent comments widget
+		.recentcomments {
+			.comment-author-link {
+				position: relative;
+			}
+			> a:before {
+				content:"";
+			}
+			&:hover {
+				a {
+					color: $first-main-color;
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&.widget_calendar{
+			#prev,
+			#next {
+				padding-left: 0;
+				padding-right: 0;
+				a {
+					color: $first-main-color;
+				}
+			}
+			#prev {
+				text-align: left;
+			}
+			#next {
+				text-align: right;
+			}
+		}
+
+		&.widget_rss{
+			ul li{
+				margin-bottom:10px;
+			}
+		}
+
+		&.edgtf-latest-posts-widget{
+			.edgtf-blog-list-holder.edgtf-image-in-box .edgtf-item-text-holder{
+				border-bottom:none;
+			}
+		}
+	}
+
+	.edgtf-side-menu-title {
+		display: block;
+		margin: 0 0 12px;
+	}
+
+	.edgtf-close-side-menu-holder {
+		display: table;
+		height: 90px;
+		position: absolute;
+		top: 0px;
+		right: 38px;
+		z-index: 1000;
+	}
+
+	.edgtf-close-side-menu-holder-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	a.edgtf-close-side-menu {
+		display: inline-block;
+		height: 26px;
+		width: 26px;
+		padding: 0 2px 4px 0; /* in order to align icon in horizontal and vertical center */
+		z-index: 1000;
+		@include edgtfTransition(transform .5s ease);
+
+		i{
+			color: $first-main-color;
+			display: inline-block;
+			font-size: 19px;
+			height: 26px;
+			line-height: 29px;
+			position: relative;
+			text-align: center;
+			width: 26px;
+		}
+
+	}
+
+	a.edgtf-close-side-menu:hover {
+		@include edgtfTransform(rotate(180deg));
+	}
+
+}
+
+.admin-bar .edgtf-side-menu .edgtf-close-side-menu-holder {
+	top: 32px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.edgtf-right-side-menu-opened {
+
+	.edgtf-wrapper,
+	footer.uncover,
+	.edgtf-fixed-wrapper.fixed,
+	.edgtf-sticky-header,
+	.mobile-header-appear .edgtf-mobile-header-inner {
+		left:-270px;
+	}
+
+}
+
+.edgtf-side-menu-slide-from-right {
+
+	.edgtf-wrapper {
+		background-color: #fff;
+		position: relative;
+		z-index: 1000;
+		@include edgtfTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+
+		.edgtf-cover {
+			z-index: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			opacity: 0;
+			filter: alpha(opacity=0);
+			background:#000;
+			-webkit-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			-moz-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			-o-transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out,background 0.2s ease-in-out,z-index 0.2s ease-in-out;
+		}
+
+	}
+
+	.carousel-inner {
+		@include edgtfTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+	}
+
+	.edgtf-side-menu {
+		padding: 5% 30px 30px 30px;
+		top: 0;
+		right: -45%;
+		width: 45%;
+		z-index: 9999;
+		text-align: left;
+		visibility: hidden;
+		-webkit-box-sizing:border-box;
+		box-sizing: border-box;
+		@include edgtfTransition(0.2s ease-in-out);
+	}
+
+//	header.sticky,
+//	header.fixed_top_header .top_header
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper.fixed {
+		-webkit-transition: left 0.2s cubic-bezier(.645,.045,.355,1.000), -webkit-transform 0.33s ease;
+		transition: left 0.2s cubic-bezier(.645,.045,.355,1.000), transform 0.33s ease;
+	}
+
+	footer.uncover {
+		@include edgtfTransition(left 0.2s cubic-bezier(.645,.045,.355,1.000));
+	}
+
+}
+
+.edgtf-side-menu-slide-from-right.edgtf-right-side-menu-opened {
+
+	.edgtf-cover {
+		cursor: url('/img/close.png'), pointer;
+		z-index: 1002;
+		opacity: 0.6;
+		filter: alpha(opacity=60);
+	}
+
+	.edgtf-side-menu {
+		right: 0px;
+		visibility: visible;
+	}
+
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* Side area slides with content style - start
+========================================================================== */
+
+.edgtf-side-menu-slide-with-content {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+	-webkit-overflow-scrolling: auto !important;
+	-webkit-transition: left 0.2s ease, right 0.2s ease;
+	-moz-transition: left 0.2s ease, right 0.2s ease;
+	-o-transition: left 0.2s ease, right 0.2s ease;
+	transition: left 0.2s ease, right 0.2s ease;
+
+	.edgtf-side-menu {
+		position: fixed;
+		visibility: visible;
+		-webkit-box-sizing:border-box;
+		box-sizing: border-box;
+		width: 470px;
+		right: -470px;
+		height: 100%;
+		top: 0;
+		z-index: 9999;
+		-webkit-transition: left 0.2s ease, right 0.2s ease;
+		-moz-transition: left 0.2s ease, right 0.2s ease;
+		-o-transition: left 0.2s ease, right 0.2s ease;
+		transition: left 0.2s ease, right 0.2s ease;
+
+	}
+
+
+
+//	header.fixed,
+//	header.fixed_top_header .top_header,
+//	header.fixed_hiding,
+	footer.uncover,
+	.edgtf-wrapper{
+		-webkit-transition: left 0.2s ease, right 0.2s ease;
+		-moz-transition: left 0.2s ease, right 0.2s ease;
+		-o-transition: left 0.2s ease, right 0.2s ease;
+		transition: left 0.2s ease, right 0.2s ease;
+	}
+
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper.fixed,
+	.edgtf-mobile-header-inner {
+		-webkit-transition: left 0.2s ease, right 0.2s ease, -webkit-transform 0.33s ease;
+		transition: left 0.2s ease, right 0.2s ease, transform 0.33s ease;
+	}
+
+	.carousel-inner {
+		left:0 !important;
+		@include edgtfTransition(left 0.2s ease);
+	}
+
+}
+
+.edgtf-side-menu-slide-with-content.edgtf-side-menu-open {
+
+	.edgtf-wrapper,
+	footer.uncover,
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper,
+	.edgtf-mobile-header-inner {
+		left: -470px;
+	}
+
+	.edgtf-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position){
+		left:-470px !important;
+	}
+
+
+//	header.fixed,
+//	header.fixed_top_header .top_header,
+//	header.fixed_hiding,
+//	header.sticky {
+//		left: -470px;
+//	}
+
+}
+
+/* width 270px start */
+.edgtf-side-menu-slide-with-content.edgtf-width-270.edgtf-side-menu-open {
+
+	.edgtf-wrapper,
+	footer.uncover,
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper,
+	.edgtf-mobile-header-inner {
+		left: -270px;
+	}
+
+	.edgtf-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position) {
+		left:-270px !important;
+	}
+
+}
+
+
+.edgtf-side-menu-slide-with-content.edgtf-width-270 {
+
+	.edgtf-side-menu {
+		width: 270px;
+		right: -270px;
+	}
+
+}
+/* width 270px end */
+
+/* width 370px start */
+.edgtf-side-menu-slide-with-content.edgtf-width-370.edgtf-side-menu-open {
+
+	.edgtf-wrapper,
+	footer.uncover,
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper,
+	.edgtf-mobile-header-inner {
+		left: -370px;
+	}
+
+	.edgtf-side-menu {
+		right: 0;
+	}
+
+	.carousel-inner:not(.relative_position){
+		left:-370px !important;
+	}
+
+//	header.fixed,
+//	header.fixed_hiding,
+//	header.sticky,
+//	header.fixed_top_header .top_header{
+//		left: -370px;
+//	}
+
+}
+
+.edgtf-side-menu-slide-with-content.edgtf-width-370 {
+
+	.edgtf-side-menu {
+		width: 370px;
+		right: -370px;
+	}
+}
+/* width 370px end */
+
+
+/* Side area slides with content style - end
+========================================================================== */
+
+/* Side area uncovering - start
+========================================================================== */
+
+.edgtf-side-area-uncovered-from-content {
+
+	.edgtf-side-menu {
+		background-color: #1b1b1b;
+		height: 100%;
+		min-height: 100%;
+		overflow: hidden;
+		padding: 30px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 210px;
+		z-index: 90;
+		visibility: hidden;
+	}
+
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper.fixed {
+		-webkit-transition: left 0.3s ease, right 0.2s ease;
+		-moz-transition: left 0.3s ease, right 0.2s ease;
+		-o-transition: left 0.3s ease, right 0.2s ease;
+		transition: left 0.3s ease, right 0.2s ease;
+	}
+
+}
+
+.edgtf-side-area-uncovered-from-content.edgtf-right-side-menu-opened {
+
+	.edgtf-sticky-header,
+	.edgtf-fixed-wrapper.fixed,
+	.edgtf-mobile-header-inner {
+		left: -270px;
+	}
+
+}
+
+/* Side area uncovering - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

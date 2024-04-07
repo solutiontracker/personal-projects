@@ -1,0 +1,334 @@
+/* ==========================================================================
+# Footer style - begin
+========================================================================== */
+
+footer {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 100;
+	position: relative;
+	color:#b7b7b7;
+	@include edgtfBoxSizing(border-box);
+
+	.edgtf-footer-inner {
+		position: relative; /* for triangle back to top and ajax transitions */
+	}
+
+	.edgtf-container {
+		background-color: inherit;
+	}
+
+	.edgtf-container-inner {
+		position: relative;
+	}
+
+	.edgtf-container-inner > .widget{
+		text-align: center;
+	}
+
+	a {
+		text-decoration: none;
+		&:hover {
+		    color: $second-main-color;
+		}
+	}
+	.edgtf-three-columns .edgtf-column{
+		width: 100%;
+		float: none;
+		text-align: center;
+
+	}
+
+	.edgtf-footer-ingrid-border-holder-outer {
+		background-color: #1d1d1d;
+	}
+
+	.edgtf-footer-top-border-holder,
+	.edgtf-footer-bottom-border-holder {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	.edgtf-footer-top-border-holder.edgtf-in-grid,
+	.edgtf-footer-bottom-border-holder.edgtf-in-grid {
+		width: $grid-width;
+		margin: 0 auto;
+	}
+
+	.edgtf-footer-top-holder {
+		display: block;
+		background-color: #151515;
+		position:relative;
+		background-position:center center;
+		background-size: cover;
+		border-bottom: 1px solid #212121;
+	}
+
+	.edgtf-footer-top {
+
+		.edgtf-footer-top-full {
+			padding: 68px 25px 62px;
+		}
+
+		&:not(.edgtf-footer-top-full) .edgtf-container-inner {
+			padding: 95px 0 108px;
+		}
+
+		&.edgtf-footer-top-aligment-center {
+			text-align: center;
+		}
+
+		&.edgtf-footer-top-aligment-left {
+			text-align: left;
+		}
+
+		&.edgtf-footer-top-aligment-right {
+			text-align: right;
+		}
+
+	}
+
+
+
+	
+	.edgtf-footer-bottom-holder {
+		width: 100%;
+		background-color: #000;
+		vertical-align: middle;
+		text-align: center;
+		padding: 18px 0;
+		border-top: 1px solid #000;
+
+		.edgtf-column{
+
+		}
+		.edgtf-column-inner {
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.edgtf-three-columns .edgtf-column:first-child .edgtf-column-inner {
+			text-align: left;
+		}
+
+		.edgtf-three-columns .edgtf-column:last-child .edgtf-column-inner {
+			text-align: right;
+		}
+
+		.edgtf-two-columns-50-50 .edgtf-column:first-child .edgtf-column-inner {
+			text-align: left;
+		}
+
+		.edgtf-two-columns-50-50 .edgtf-column:last-child .edgtf-column-inner {
+			text-align: right;
+		}
+
+		.edgtf-footer-bottom-border-bottom-holder {
+			clear: both;
+		}
+
+	}
+
+}
+
+/* Footer uncover - begin
+========================================================================== */
+
+footer.edgtf-footer-uncover {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	@include edgtfTransition(left 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1));
+
+	.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text,
+	.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number,
+	.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date,
+	.cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea,
+	.cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select,
+	.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz {
+		transform: none;
+	}
+
+}
+
+.edgtf-right-side-menu-opened footer.edgtf-footer-uncover {
+	left: -270px;
+}
+
+/* Footer uncover - end
+========================================================================== */
+
+/* Footer boxed - begin
+========================================================================== */
+
+.boxed footer {
+	width: 100% !important;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+}
+
+/* Footer boxed - end
+========================================================================== */
+
+/* Footer disabled - begin
+========================================================================== */
+
+footer.edgtf-disable-footer {
+	display: none;
+}
+
+/* Footer disabled - end
+========================================================================== */
+
+
+/* ==========================================================================
+# Footer style - end
+========================================================================== */
+
+/* ==========================================================================
+# Footer widgets - begin
+========================================================================== */
+
+footer .widget {
+	margin-bottom: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.edgtf-footer-widget-title {
+		color: #ffffff;
+		margin-bottom: 27px;
+      font-weight: 500;
+
+	}
+
+	&.widget_edgtf_instagram_widget{
+		.edgtf-footer-widget-title {
+			margin-bottom: 31px;
+		}
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+			a {
+				color: #fff;
+				font-family: $second-font;
+				&:hover {
+				    color: $second-main-color;
+				}
+			}
+			padding-bottom: 15px;
+		}
+	}
+
+	select,
+	input[type="text"] {
+		width: 100%;
+		overflow: hidden;
+		border: 1px solid #e9e9e9;
+		background-color: #f6f6f5;
+		padding: 0 10px;
+		height: 35px;
+		outline: none;
+		color: #7f8385;
+		font-family: inherit;
+		@include edgtfBoxSizing(border-box);
+	}
+
+	&.widget_search{
+
+		input[type="text"] {
+			width: 80%;
+		}
+
+		input[type='submit']{
+			width: 35px;
+			height: 35px;
+			line-height: 36px;
+			padding: 0;
+			cursor: pointer;
+			border: none;
+			font-family: FontAwesome, serif !important;
+
+			&:after{
+				content: '/f002';
+				font-family: FontAwesome, sans-serif;
+				color:#333;
+				font-size: 16px;
+			}
+		}
+
+	}
+
+	&.widget_recent_entries {
+
+		ul {
+			li{
+				@include edgtfTransform(translateZ(0)); //blink fix
+				margin-bottom: 8px;
+				border-bottom: 1px solid #434241;
+
+				&:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+
+
+		.post-date {
+			display: block;
+			font-family:$second-font;
+			font-size:11px;
+			line-height:14px;
+			color: $second-main-color;
+		}
+	}
+
+	.edgtf-subscription-form {
+		position: relative;
+		.wpcf7-form-control.wpcf7-text {
+			border: 1px solid #4d4d4d;
+			@include edgtfBorderRadius(4px);
+			background-color: transparent;
+			margin: 0;
+			width: 71%;
+			font-size: 12px;
+			padding: 8px 12px;
+		}
+
+		input.wpcf7-form-control.wpcf7-submit {
+			position: absolute;
+			top: 0;
+			right: 42px;
+			@include edgtfBorderRadius(4px);
+			width: 34px;
+			height: 34px;
+			line-height: 34px;
+			font-size: 20px;
+			padding: 0;
+			font-family: 'ElegantIcons', sans-serif;
+
+			&:hover {
+				color: #fff;
+				background-color: $first-main-color;
+				border-color: $first-main-color;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+# Footer widgets - end
+========================================================================== */
+

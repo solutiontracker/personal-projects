@@ -1,0 +1,31 @@
+/* ==========================================================================
+# Portfolio Single Small Images - begin
+========================================================================== */
+
+.small-images {
+    .edgtf-portfolio-media .edgtf-portfolio-single-media {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .edgtf-follow-portfolio-info {
+        position: relative;
+
+        //@include edgtfTransition(margin-top 0.2s ease);
+    }
+
+	.edgtf-portfolio-title{
+		line-height: 1em;
+	}
+
+	div.edgtf-portfolio-info-holder{
+		margin-top:0;
+	}
+}
+
+/* ==========================================================================
+# Portfolio Single Small Images - end
+========================================================================== */

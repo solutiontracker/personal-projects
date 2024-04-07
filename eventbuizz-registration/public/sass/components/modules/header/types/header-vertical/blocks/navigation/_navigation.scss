@@ -1,0 +1,126 @@
+@import "types/float";
+//@import "types/on-click";
+//@import "types/on-hover";
+//@import "types/slide-in";
+
+.edgtf-header-vertical {
+    .edgtf-vertical-menu {
+        position: relative;
+        z-index: 101;
+        margin: 40px 0 0;
+        text-align: left;
+
+        ul {
+            position: relative;
+            list-style-type: none;
+        }
+
+        ul li {
+            position: relative;
+	        font-family:Montserrat,serif;
+	        border-bottom:1px solid rgba(0,0,0,0.09);
+	        &:last-child{
+		        border-bottom:none;
+	        }
+        }
+
+        & > ul > li > a:hover {
+            background-color: #eeeeee;
+        }
+
+        & > ul > li > a {
+            position: relative;
+            display: block;
+            padding: 13px 45px;
+            line-height: 18px;
+            color:#313131;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0;
+            cursor: pointer;
+	        font-size:13px;
+	        letter-spacing:1px;
+            @include edgtfTransition(
+                    color 0.15s ease-out,
+                    text-decoration 0.15s ease-out,
+                    background-color 0.15s ease-out
+            );
+        }
+
+
+        & > ul > li > a:after {
+            display: none;
+            height: 1px;
+            width: 44px;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: $first-main-color;
+        }
+
+        & > ul > li > a > span.edgtf-item-inner {
+            @include edgtfTransition(text-decoration 0.2s ease-out);
+        }
+        
+        & > ul > li:last-child > a:after {
+            content: none;
+        }
+
+	    ul > li.menu-item-has-children > a {
+
+	        .plus {
+		        width: 14px;
+		        height: 14px;
+		        z-index: 10000;
+		        float:right;
+		        color: $first-main-color;
+		        font-size: 14px;
+		        line-height:14px;
+		        font-family: 'ElegantIcons';
+		        cursor: pointer;
+	        }
+
+		    .edgtf-item-inner{
+			    float:left;
+		    }
+
+		    .edgtf-item-outer{
+			    &:after,
+			    &:before{
+				    content:' ';
+				    display:table;
+			    }
+
+			    &:after{
+				    clear:both;
+			    }
+		    }
+	    }
+
+        ul > li.menu-item-has-children > a .plus:before {
+            content: "\35";
+        }
+
+        ul > li.menu-item-has-children.open > a .plus:before,
+        ul > li.menu-item-has-children.current-menu-ancestor > a .plus:before {
+            content: "\35";
+        }
+
+        ul > li.menu-item-has-children a .plus {
+            display: block;
+        }
+
+        .edgtf-menu-second .inner {
+            position: relative;
+            display: block;
+            padding: 0;
+            z-index: 997;
+        }
+
+        .edgtf-menu-icon:not(.blank):not(.null) {
+            padding-right: 5px;
+        }
+    }
+}

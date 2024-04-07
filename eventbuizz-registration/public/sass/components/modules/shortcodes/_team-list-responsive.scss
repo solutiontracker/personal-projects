@@ -1,0 +1,68 @@
+@include ipad-portrait{
+
+  .edgtf-team-list-holder{
+
+    .edgtf-team{
+      &.edgtf-tl-three-columns,
+      &.edgtf-tl-two-columns,
+      &.edgtf-tl-four-columns{
+        float: none;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .edgtf-team-box .edgtf-team-list-details{
+    padding: 10px 24px 41px 42px;
+  }
+  .edgtf-team-modal-holder .edgtf-team-box-image-holder .edgtf-team-box-title-holder{
+    left:42px;
+  }
+
+  .post-type-archive-team-member{
+
+    .edgtf-blog-holder{
+
+
+      article{
+        width: 100%;
+        float: none;
+        padding: 0;
+
+      }
+    }
+  }
+}
+
+@include phone-landscape{
+
+  .edgtf-team-modal-holder{
+
+    .edgtf-team-box{
+
+      .edgtf-team-box-content{
+
+        .edgtf-team-list-social-media{
+
+          height: 100px;
+          line-height: normal;
+
+          .edgtf-team-box-title{
+
+            top:0;
+            @include edgtfTransform(translatey(0));
+            margin-top: 8px;
+          }
+
+          .edgtf-team-list-social-media-holder{
+            margin-left: 32px;
+            margin-top: 6px;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+}
+

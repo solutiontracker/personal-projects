@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="23" viewBox="0 0 37 23">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_769" data-name="Rectangle 769" width="10.798" height="11.137" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2106" data-name="Group 2106" transform="translate(-1012 -840)">
+    <rect id="Rectangle_770" data-name="Rectangle 770" width="37" height="23" rx="2" transform="translate(1012 840)" fill="#fff"/>
+    <g id="Group_2105" data-name="Group 2105" transform="translate(1025 843)">
+      <g id="Group_2104" data-name="Group 2104" clip-path="url(#clip-path)">
+        <path id="Path_732" data-name="Path 732" d="M3.562,75.407a1.379,1.379,0,0,1-1.3,1.263V78.6A3.945,3.945,0,0,1,.579,77.1a4.605,4.605,0,0,1-.3-.832A9.959,9.959,0,0,1,0,74.05H3.571a11.381,11.381,0,0,1-.009,1.357" transform="translate(0 -67.835)" fill="#7997c9"/>
+        <path id="Path_733" data-name="Path 733" d="M7.214.013A3.833,3.833,0,0,0,5.481.69,2.6,2.6,0,0,0,4.424,2.551c-.076.562-.138,1.126-.212,1.727H.749A2.6,2.6,0,0,1,.841,3.222a4.486,4.486,0,0,1,.682-1.75A3.959,3.959,0,0,1,2.6.539,3.916,3.916,0,0,1,4.591,0H6.968l.246.013" transform="translate(-0.661)" fill="#7997c9"/>
+        <path id="Path_734" data-name="Path 734" d="M52.873,5.353V8.624a3.935,3.935,0,0,1-3.933,3.933h-2.99a.233.233,0,0,1-.021-.032,2.852,2.852,0,0,0,1.623-1.34A3.846,3.846,0,0,0,48.007,9.3c.016-.55,0-1.1,0-1.7h2V5.744H48.088a1.189,1.189,0,0,1,.473-1.333A3.115,3.115,0,0,1,50.019,4.1c0-.81-.073-1.711-.073-2.546l.022.006a3.924,3.924,0,0,1,1.753,1.016l.005.005a3.923,3.923,0,0,1,1.147,2.776" transform="translate(-42.075 -1.42)" fill="#7997c9"/>
+      </g>
+    </g>
+    <text id="Forbrugsforeningen" transform="translate(1013 860)" font-size="3" font-family="OpenSans-Semibold, Open Sans" font-weight="600"><tspan x="0" y="0">FORBRUGSFORENINGEN</tspan></text>
+  </g>
+</svg>

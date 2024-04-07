@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.512" height="17.194" viewBox="0 0 20.512 17.194">
+  <g id="add_link" data-name="add link" transform="translate(0.5 0.5)">
+    <path id="Path_679" data-name="Path 679" d="M15,11.559a3.889,3.889,0,0,0,5.864.42L23.2,9.645a3.888,3.888,0,1,0-5.5-5.5l-1.337,1.33" transform="translate(-8.774 -3.008)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_680" data-name="Path 680" d="M12.329,15.052a3.889,3.889,0,0,0-5.864-.42L4.132,16.965a3.888,3.888,0,1,0,5.5,5.5l1.33-1.33" transform="translate(-2.993 -8.056)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_1828" data-name="Group 1828" transform="translate(12.967 9.649)">
+      <line id="Line_185" data-name="Line 185" y2="6.545" transform="translate(3.273 0)" fill="none" stroke="#117093" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_186" data-name="Line 186" x1="6.545" transform="translate(0 3.273)" fill="none" stroke="#117093" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

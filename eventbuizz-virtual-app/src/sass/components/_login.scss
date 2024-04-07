@@ -1,0 +1,63 @@
+.logo-event {
+  max-width: 250px;
+}
+.app-login-area {
+  width: 320px;
+  max-width: 320px;
+  h3 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+  .app-field-container {
+    margin-bottom: 20px;
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 50px;
+      border-radius: 5px;
+      padding-left: 50px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+    input[type="text"] {
+      background: url(../images/ico-envelope.svg) no-repeat 15px
+        center;
+    }
+    input[type="password"] {
+      background: url(../images/ico-lock.svg) no-repeat 15px center;
+    }
+    .error {
+      display: none;
+      font-size: 13px;
+      color: $color-danger;
+    }
+    &.error {
+      .error {
+        display: block;
+      }
+      input[type="text"],
+      input[type="password"] {
+        border-color: $color-danger;
+      }
+    }
+    .label-checkbox {
+      display: flex;
+      align-items: center;
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+    }
+    .app-forget-pass {
+      color: $link;
+      cursor: pointer;
+    }
+  }
+  .btn-submit {
+    width: 100%;
+    border-radius: 25px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}

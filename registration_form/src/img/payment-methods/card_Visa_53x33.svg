@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.939" height="23.087" viewBox="0 0 36.939 23.087">
+  <g id="Group_2246" data-name="Group 2246" transform="translate(-963.111 -863.457)">
+    <g id="Page-1" transform="translate(963.111 863.457)">
+      <g id="Visa" transform="translate(0 0)">
+        <rect id="Rectangle-20" width="36.496" height="18.248" transform="translate(0.443 2.101)" fill="#f6f6f6"/>
+        <path id="Rectangle-1" d="M34.168,0H1.847A1.986,1.986,0,0,0,0,1.847v2.77H36.938V2.77A2.449,2.449,0,0,0,34.168,0Zm0,0" transform="translate(0 0)" fill="#265697" fill-rule="evenodd"/>
+        <path id="Rectangle-1-2" data-name="Rectangle-1" d="M0,80s0,0,0,1.847a2.449,2.449,0,0,0,2.77,2.77h31.4a2.449,2.449,0,0,0,2.77-2.77V80Zm0,0" transform="translate(0 -61.531)" fill="#d97b16" fill-rule="evenodd"/>
+        <path id="Shape" d="M85.492,28.411A6.621,6.621,0,0,0,83.151,28c-2.582,0-4.4,1.329-4.416,3.233-.015,1.408,1.3,2.193,2.29,2.661,1.017.48,1.359.786,1.354,1.215-.006.657-.812.957-1.563.957a5.379,5.379,0,0,1-2.46-.514l-.337-.156-.367,2.193a8.116,8.116,0,0,0,2.911.523c2.747,0,4.53-1.313,4.55-3.347.01-1.114-.686-1.962-2.194-2.662-.913-.453-1.473-.756-1.467-1.214,0-.407.473-.843,1.5-.843a4.731,4.731,0,0,1,1.956.375l.234.113.354-2.123" transform="translate(-59.725 -21.536)" fill="#265697" fill-rule="evenodd"/>
+        <path id="Shape-2" data-name="Shape" d="M116.424,28.778h-2.019a1.3,1.3,0,0,0-1.368.812l-3.881,8.977H111.9s.449-1.207.55-1.472l3.347,0c.078.343.318,1.468.318,1.468h2.425l-2.115-9.79ZM113.2,35.092c.216-.564,1.041-2.738,1.041-2.738-.015.026.215-.567.346-.935l.177.845s.5,2.338.6,2.829Zm0,0" transform="translate(-83.956 -22.134)" fill="#265697" fill-rule="evenodd"/>
+        <path id="Shape-3" data-name="Shape" d="M59.25,38.533l1.634-9.8H63.5l-1.635,9.8Zm0,0" transform="translate(-45.571 -22.103)" fill="#265697" fill-rule="evenodd"/>
+        <path id="Shape-4" data-name="Shape" d="M28.269,28.768l-2.558,6.68-.273-1.358a7.592,7.592,0,0,0-3.619-4.109l2.339,8.567,2.765,0,4.114-9.777H28.269" transform="translate(-16.782 -22.127)" fill="#265697" fill-rule="evenodd"/>
+        <path id="Shape-5" data-name="Shape" d="M14.247,28.742H10.033l-.033.2a8.691,8.691,0,0,1,6.348,5.125l-.916-4.5a1.1,1.1,0,0,0-1.184-.827" transform="translate(-7.691 -22.107)" fill="#d97b16" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

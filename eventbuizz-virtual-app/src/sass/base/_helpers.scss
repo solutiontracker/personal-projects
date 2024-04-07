@@ -1,0 +1,53 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: $default;
+  backface-visibility: hidden;
+}
+html,body,#root,#App {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+ a {
+   color: $link;
+ }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+textarea {
+  height: 35px;
+  padding: 8px 15px;
+  border: 1px solid $border;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: $black;
+  box-shadow: none !important;
+  outline: none !important;
+}
+textarea {
+  height: 90px;
+}

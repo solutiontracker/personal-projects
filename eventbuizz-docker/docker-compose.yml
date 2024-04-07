@@ -1,0 +1,160 @@
+version: "3.8"
+
+networks:
+    eventbuizz-vpn-network:
+      driver: bridge
+        
+services:
+  api:
+    container_name: api
+    image: nginx
+    ports:
+      - 8100:80
+    working_dir: /var/www/html
+    volumes:
+      - ./../eventbuizz-api:/var/www/html
+      - ./nginx/api:/etc/nginx/conf.d
+    depends_on:
+      - php8
+    networks: 
+      - eventbuizz-vpn-network
+
+  aws:
+    container_name: aws
+    image: nginx
+    ports:
+      - 8200:80
+    working_dir: /var/www/html
+    volumes:
+      - ./../eventbuizz-aws:/var/www/html
+      - ./nginx/aws:/etc/nginx/conf.d
+    depends_on:
+      - php7
+    networks: 
+      - eventbuizz-vpn-network
+
+  socket:
+    container_name: socket
+    build: 
+        context: ./socket/
+        dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    working_dir: /var/www/html
+    volumes:
+      - ./../eventbuizz-aws:/var/www/html
+    command: bash -c "npm install && node /var/www/html/server.js"
+    networks: 
+      - eventbuizz-vpn-network
+
+  php7:
+    build: 
+        context: ./php7/
+        dockerfile: Dockerfile
+    image: php-fpm-70
+    container_name: php7
+    working_dir: /var/www/html
+    volumes:
+      - ./../eventbuizz-aws:/var/www/html
+      - ./php7/config/php7.0.ini:/usr/local/etc/php/conf.d/php.ini
+      - ./php7/cron/eventbuizz_crons:/etc/cron.d/eventbuizz_crons
+    networks: 
+      - eventbuizz-vpn-network
+
+  php8:
+    build: 
+        context: ./php8/
+        dockerfile: Dockerfile
+    image: php-fpm-80    
+    container_name: php8
+    working_dir: /var/www/html
+    volumes:
+      - ./../eventbuizz-api:/var/www/html
+      - ./php8/config/php8.0.ini:/usr/local/etc/php/conf.d/php.ini   
+      - ./php8/cron/eventbuizz_crons:/etc/cron.d/eventbuizz_crons
+    networks: 
+      - eventbuizz-vpn-network
+
+  # mysql:
+  #   image: mariadb:10.3.31
+  #   container_name: mysql
+  #   restart: unless-stopped
+  #   tty: true
+  #   ports:
+  #     - 3306:3306
+  #   environment: 
+  #       MYSQL_DATABASE: eventbuizz2
+  #       MYSQL_ROOT_PASSWORD: root
+  #       MYSQL_PASSWORD: root
+  #       MYSQL_USER: mysql
+  #       SERVICE_TAGS: dev
+  #       SERVICE_NAME: mysql
+  #   volumes: 
+  #       - ./mysql/config:/etc/mysql/conf.d
+  #       - ./mysql/data:/var/lib/mysql
+  #   networks: 
+  #       - eventbuizz-vpn-network
+
+  mysql:
+    image: mysql:5.7
+    command: --default-authentication-plugin=mysql_native_password
+    container_name: mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 3306:3306
+    environment: 
+        MYSQL_DATABASE: eventbuizz2
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_PASSWORD: root
+        MYSQL_USER: mysql
+        SERVICE_TAGS: dev
+        SERVICE_NAME: mysql
+    volumes: 
+        - ./mysql/config:/etc/mysql/conf.d
+        - ./mysql/data:/var/lib/mysql
+    networks: 
+        - eventbuizz-vpn-network
+
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    volumes: 
+        - ./phpmyadmin/config/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root 
+      MAX_EXECUTION_TIME: 900
+      MEMORY_LIMIT: 1024M
+      UPLOAD_LIMIT: 1024M
+    networks:
+      - eventbuizz-vpn-network
+      
+  redis:
+    image: redis
+    container_name: redis
+    expose:
+      - 6379
+    volumes: 
+        - ./redis/config:/usr/local/etc/redis
+        - ./redis/data:/data
+    networks:
+      - eventbuizz-vpn-network
+  
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    expose:
+      - 1025
+      - 8025
+    command: Mailhog
+    networks:
+      - eventbuizz-vpn-network

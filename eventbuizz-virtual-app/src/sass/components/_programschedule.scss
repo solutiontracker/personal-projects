@@ -1,0 +1,429 @@
+#timelinearea {
+  background: $light;
+  padding: 0 15px;
+  #timelinepanel {
+    padding: 30px 15px 0 15px;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    #weekdays {
+      padding: 0 30px;
+      padding-top: 20px;
+      margin-bottom: 15px;
+      max-width: 440px;
+      overflow: hidden;
+      position: relative;
+      &.initialized {
+        padding: 20px 0 0 0;
+        .arrowscarousel {
+          display: none;
+        }
+      }
+      #theCarousel {
+        overflow: hidden;
+        ul {
+          width: 100%;
+          overflow: hidden;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          height: 42px;
+          font-size: 0;
+          position: relative;
+          left: 0;
+          transition: left 0.1s linear;
+          li {
+            text-align: center;
+            font-size: 14px;
+            display: inline-block;
+            cursor: pointer;
+            line-height: 1.2;
+            padding: 0 8px;
+            color: $default;
+            width: 75px;
+            &.active {
+              color: $link;
+            }
+            strong,
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: 1100px) {
+        max-width: 280px;
+      }
+    }
+    .range-slider-arrow-item {
+      position: absolute;
+      top: 16px;
+      border: 0;
+      background: url(../images/ico-arrowlarge.png) no-repeat center center;
+      margin: 0;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      text-indent: 60px;
+      outline: none;
+      box-shadow: none;
+      &.back {
+        left: 0;
+        transform: scale(-1);
+      }
+      &.forward {
+        right: 0;
+      }
+    }
+  }
+  .filterarea {
+    align-items: center;
+    margin-bottom: 15px;
+    label {
+      white-space: nowrap;
+      margin: 0;
+      font-size: 14px;
+      color: rgba($black, 0.6);
+      padding-right: 15px;
+    }
+    .custom-select {
+      max-width: 160px;
+      border-radius: 0;
+      height: 32px;
+      font-size: 12px;
+      color: $default;
+      font-family: "Arial", sans-serif;
+      font-weight: 400;
+      option {
+        font-weight: 400;
+      }
+    }
+  }
+  #timeslider {
+    display: flex;
+    justify-content: flex-end;
+    #rangeslider {
+      max-width: 512px;
+      width: 100%;
+      position: relative;
+      padding: 0 50px 15px;
+      &.disabled::before {
+        content: "";
+        cursor: not-allowed;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.6);
+        z-index: 99;
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: auto;
+        list-style: none;
+        max-width: calc(100% - 15px);
+        li {
+          flex-grow: 1;
+          flex-basis: 0;
+          text-align: center;
+          font-size: 14px;
+          color: rgba($black, 0.6);
+        }
+      }
+      #range {
+        width: 100%;
+        height: 32px;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 0;
+        background: 0 0;
+        &:focus {
+          outline: 0;
+        }
+        &:focus::-webkit-slider-runnable-track {
+          background: $link;
+          border-radius: 20px;
+        }
+        &:active::-moz-range-track {
+          background: $link;
+          border-radius: 20px;
+        }
+        &::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 8px;
+          background: $link;
+          border-radius: 20px;
+          border: none;
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: 1px solid $link;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          background: #fff;
+          margin-top: -11px;
+        }
+        &::-moz-range-track {
+          width: 100%;
+          height: 8px;
+          background: $link;
+          border-radius: 20px;
+          border: none;
+        }
+        &::-moz-range-thumb {
+          border: 1px solid $link;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          background: #fff;
+        }
+        &::-ms-track {
+          width: 100%;
+          height: 8px;
+          background: 0 0;
+          border-color: transparent;
+          color: transparent;
+          border-width: 11px 0;
+        }
+        &::-ms-fill-lower {
+          background: $link;
+          border-radius: 20px;
+        }
+        &::-ms-fill-upper {
+          background: $link;
+          border-radius: 20px;
+        }
+        &::-ms-thumb {
+          border: 1px solid $link;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          background: #fff;
+        }
+        &:focus::-ms-fill-lower {
+          background: $link;
+          border-radius: 20px;
+        }
+        &:focus::-ms-fill-upper {
+          background: $link;
+          border-radius: 20px;
+        }
+        &::-ms-tooltip {
+          display: none;
+        }
+      }
+    }
+  }
+}
+#timelindeschdle {
+  overflow: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100% - 160px);
+  #timelinewrapp {
+    margin: auto;
+    position: relative;
+    #currentTimeline {
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $link;
+      display: none;
+      pointer-events: none;
+      z-index: 9;
+    }
+    #timelineheader {
+      font-size: 0;
+      background: rgba($black, 0.6);
+      padding: 0px;
+      position: sticky;
+      z-index: 9;
+      top: 0;
+      span {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        color: $white;
+        font-weight: 400;
+        padding: 5px 8px;
+        line-height: 15px;
+        border-left: 1px solid rgba($white, 0.47);
+        position: relative;
+      }
+    }
+    #timelinecontent {
+      .datarow {
+        background: #fafafa;
+        border-bottom: 1px solid #e6e6e6;
+        font-size: 0;
+        position: relative;
+        min-height: 126px;
+        a,
+        a:focus,
+        a:active {
+          outline: none !important;
+        }
+        .datawrapp {
+          font-size: 14px;
+          display: inline-block;
+          padding: 10px;
+          border-left: 1px solid #e6e6e6;
+          border-right: 1px solid #e6e6e6;
+          color: #555;
+          background: #fff;
+          position: absolute;
+          height: 125px;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 38px;
+          overflow: hidden;
+          strong {
+            font-weight: 600;
+            line-height: 1.2;
+            font-size: 14px;
+            white-space: nowrap;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          span.time {
+            display: block;
+            font-size: 12px;
+          }
+          span.video {
+            display: flex;
+            margin-top: 3px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 13px;
+            padding-left: 18px;
+            color: #555;
+            position: relative;
+            align-items: center;
+            svg {
+              position: absolute;
+              left: 0;
+              top: 2px;
+              width: 15px;
+            }
+          }
+          span.tracks {
+            font-size: 12px;
+            color: rgba($black,0.5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            span {
+              &::after {
+                content: ',';
+                margin-right: 3px;
+              }
+              &:last-child {
+                &::after {
+                  content: '';
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+          span.tag {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 14px;
+            padding: 3px 10px 4px;
+            border: 1px solid #666e72;
+            border-radius: 30px;
+            margin-top: 4px;
+            background: #f8f8f8;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+          }
+        }
+      }
+    }
+    &.timeline-vertical {
+      .timelinecontent {
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+        padding-top: 20px;
+        div {
+          padding: 0 20px;
+        }
+        .timelinebox {
+          margin-bottom: 15px;
+          display: flex;
+          color: $dark;
+          strong {
+            display: block;
+          }
+          span {
+            display: block;
+            &.time {
+              width: 85px;
+            }
+            &.video {
+              display: flex;
+              margin-top: 3px;
+              margin-bottom: 4px;
+              font-size: 12px;
+              line-height: 13px;
+              padding-left: 18px;
+              color: #555;
+              position: relative;
+              align-items: center;
+              svg {
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 15px;
+              }
+            }
+            &.tracks {
+              font-size: 12px;
+              color: rgba($black,0.5);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: flex;
+              span {
+                &::after {
+                  content: ',';
+                  margin-right: 3px;
+                }
+                &:last-child {
+                  &::after {
+                    content: '';
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+            &.tag {
+              display: inline-block;
+              font-size: 12px;
+              line-height: 14px;
+              padding: 3px 10px 4px;
+              border: 1px solid #666e72;
+              border-radius: 30px;
+              margin-top: 4px;
+              background: #f8f8f8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#theCarousel.disbaled ~ .arrowscarousel {
+  pointer-events: none;
+}

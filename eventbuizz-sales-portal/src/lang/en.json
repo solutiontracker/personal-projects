@@ -1,0 +1,135 @@
+{
+    "auth_layout": {
+        "title": "WELCOME TO SALES PORTAL",
+        "subtitle": "Maximize your sales potential with our customizable portal solutions",
+        "feature_one": "Customization following easy steps",
+        "feature_two": "Sales forecasting and analytics",
+        "feature_three": "Sort out event registration in no time",
+        "feature_four": "Feel safe with our step by step navigation"
+    },
+    "auth_login":{
+        "page_title":"Sign in",
+        "email_label":"Enter your email",
+        "password_label":"Password",
+        "remember_me_label":"Remember me",
+        "forgot_password_label":"Forgot Password?",
+        "signin_button_label":"Sign in",
+        "signin_button_processing_label":"Signing in..."
+    },
+    "auth_forgot_password_request":{
+        "page_title":"Did you forget your password ?",
+        "page_subtitle":"Enter your email address you’re using for your account below and we will send you a password reset link.",
+        "email_label":"Enter your email",
+        "send_button_label":"SEND",
+        "send_button_sending_label":"SENDING..."
+    },
+    "auth_forgot_password_verify":{
+        "page_title":"Verify reset password code",
+        "page_subtitle":"Please enter the reset password token that we have just sent to your registered email address.",
+        "reset_code_label":"Enter reset code",
+        "verify_button_label":"Verify",
+        "verify_button_verifying_label":"Verifying..."
+    },
+    "auth_forgot_password_reset":{
+        "page_title":"Reset password",
+        "page_subtitle":"Enter new password and confirm new password to reset password.",
+        "new_password_label":"Enter new password",
+        "confirm_password_label":"Confirm new password",
+        "reset_button_label":"RESET",
+        "reset_button_reseting_label":"RESETING...",
+        "confirm_password_mismatch_label":"Password and confirm password do not match"
+    },
+    "manage-events-layout":{
+        "return_to_list_label":"Return to list"
+    },
+    "manage-events-page":{
+        "no_data_available":"No data available",
+        "event_table":{
+            "event_logo":"Event Logo",
+            "event_name":"Event Name ",
+            "event_date":"Event Date",
+            "created_by":"Created by",
+            "organized_by":"Organized by",
+            "tickets_left":"Tickets Left",
+            "sold_tickets":"Sold Tickets",
+            "total_tickets":"Total Tickets",
+            "my_sold_tickets":"My Sold Tickets",
+            "my_revenue":"My Revenue"
+        },
+        "event_filters":{
+            "active_future":"Active and future events",
+            "active":"Active events",
+            "future":"Future events",
+            "expired":"Expired events",
+            "name":"All events"
+        },
+        "sort_filters":{
+             "name": "Event name",
+             "organizer_name": "Organizer name",
+             "start_date": "Start date",
+             "end_date": "End date"
+        },
+        "search":"Search",
+        "event_filter_label":"Filter By",
+        "sort_filter_label":"Sort By"
+    },
+    "manage-orders-layout":{
+        "create_order":"Create order",
+        "send_order":"Send order",
+        "download_pdf":"PDF",
+        "no_data_available":"No data available"
+    },
+    "manage-orders-page":{
+        "no_data_available":"No data available",
+        "stats_sold_tickets":"sold",
+        "stats_waiting_tickets":"waiting",
+        "stats_my_sold_tickets":"My Sold Tickets",
+        "stats_my_revenue":"My Revenue",
+        "order_list":"Order List",
+        "tickets_detail":"Tickets details",
+        "tickets_detail_table":{
+            "form":"Form",
+            "waiting":"Waiting",
+            "tickets_sold":"Tickets sold",
+            "tickets_left":"Tickets left",
+            "total_tickets":"Total tickets",
+            "time_left":"Time left"
+        },
+        "order_table":{
+            "number":"Order #",
+            "date":"Date",
+            "attendee_name":"Name",
+            "attendee_email":"Email",
+            "company":"Company",
+            "sold_tickets":"Sold Ticket",
+            "revenue":"Revenue",
+            "status":"Order Status",
+            "payment_status":"Payment Status"
+        },
+        "date_ended":"Date ended",
+        "view":"View",
+        "download":"Download as order",
+        "download_as_invoice":"Download as invoice",
+        "delete_order_alert_label":"Are you sure you want to delete this order?",
+        "search":"Search",
+        "order_filters":{
+            "all": "All orders",
+            "completed": "Completed",
+            "cancelled": "Cancelled",
+            "pending": "Pending",
+            "payment_received": "Received",
+            "payment_pending": "Pending",
+            "payment_status":"Payment Status",
+            "order_status":"Order Status"
+        }
+    },
+    "messages":{
+        "errors":{
+            "invalid_data":"Invalid data!",
+            "someting_went_wrong":"Sorry! something went wrong"
+        },
+        "success":{
+            "password_changed":"Password changed successfully"
+        }
+    }
+}

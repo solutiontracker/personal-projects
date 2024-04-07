@@ -1,0 +1,109 @@
+org: eventbuizz
+app: eventbuizz
+service: eventbuizz
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: ${opt:stage,'stage'} # Set the default stage used. Default is dev
+  region: eu-west-1 # Overwrite the default region used. Default is us-east-1
+  profile: production # The default profile to use with this service
+  memorySize: 1024 # Overwrite the default memory size. Default is 1024
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action: "sqs:*"
+      Resource: "arn:aws:sqs:${self:provider.region}:${self:custom.AWS_ACCOUNT_ID.${self:provider.stage}}:${self:custom.AWS_QA_QUEUE.${self:provider.stage}}"
+  # Environment Variables
+  environment:
+    AWS_ACCOUNT_ID: ${self:custom.AWS_ACCOUNT_ID.${self:provider.stage}}
+    AWS_SPARKPOST_QUEUE: ${self:custom.AWS_SPARKPOST_QUEUE.${self:provider.stage}}
+    AWS_REQUEST_TO_SPEAK_QUEUE: ${self:custom.AWS_REQUEST_TO_SPEAK_QUEUE.${self:provider.stage}}
+    AWS_REQUEST_TO_SPEAK_BUCKET: ${self:custom.AWS_REQUEST_TO_SPEAK_BUCKET.${self:provider.stage}}
+  # Database
+    AWS_DATABASE_HOST: ${self:custom.AWS_DB_HOST.${self:provider.stage}}
+    AWS_DATABASE_NAME: ${self:custom.AWS_DB_DATABASE.${self:provider.stage}}
+    AWS_DATABASE_USER: ${self:custom.AWS_DB_USER.${self:provider.stage}}
+    AWS_DATABASE_PASSWORD: ${self:custom.AWS_DB_PASSWORD.${self:provider.stage}}
+  iam:
+    role: "arn:aws:iam::${self:custom.AWS_ACCOUNT_ID.${self:provider.stage}}:role/lambda_basic_execution"
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'
+  polls:
+    handler: requests/polls.handler
+    name: ${self:provider.stage}-polls # optional, Deployed Lambda name
+    description: Description of what the lambda function does # optional, Description to publish to AWS
+    #provisionedConcurrency: 3 # optional, Count of provisioned lambda instances
+    timeout: 10
+    events:
+      - sqs:
+          arn: "arn:aws:sqs:${self:provider.region}:${self:custom.AWS_ACCOUNT_ID.${self:provider.stage}}:${self:custom.AWS_QA_QUEUE.${self:provider.stage}}"
+          batchSize: 10
+
+
+#resources:
+  #Resources:
+      #MyBucket:
+          #Type: AWS::S3::Bucket
+          #Properties:
+              #BucketName: 'speakerlist-sqs-messages' 
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 4002
+  stages:
+    - dev
+    - stage
+    - prod
+  AWS_ACCOUNT_ID:
+    local: '056936973133'
+    dev: '056936973133'
+    stage: '056936973133'
+    prod: '056936973133'
+  AWS_SPARKPOST_QUEUE:
+    local: 'stage_sparkpost_queue'
+    dev: 'dev_sparkpost_queue'
+    stage: 'stage_sparkpost_queue'
+    prod: 'sparkpost_queue'
+  AWS_REQUEST_TO_SPEAK_QUEUE:
+    local: 'stage_request_to_speak_queue.fifo'
+    dev: 'dev_request_to_speak_queue.fifo'
+    stage: 'stage_request_to_speak_queue.fifo'
+    prod: 'request_to_speak_queue.fifo'
+  AWS_REQUEST_TO_SPEAK_BUCKET:
+    local: 'speakerlist-sqs-messages'
+    dev: 'speakerlist-sqs-messages'
+    stage: 'speakerlist-sqs-messages'
+    prod: 'speakerlist-sqs-messages'
+  AWS_QA_QUEUE:
+    local: 'stage_qa_queue'
+    dev: 'stage_qa_queue'
+    stage: 'stage_qa_queue'
+    prod: 'stage_qa_queue'
+  AWS_DB_HOST:
+    local: 'eventbuizz-dev-rds.cvblqlmpu2qk.eu-west-1.rds.amazonaws.com'
+    dev: 'eventbuizz-dev-rds.cvblqlmpu2qk.eu-west-1.rds.amazonaws.com'
+    stage: 'eventbuizz-dev-rds.cvblqlmpu2qk.eu-west-1.rds.amazonaws.com'
+    prod: 'eventbuizz-dev-rds.cvblqlmpu2qk.eu-west-1.rds.amazonaws.com'
+  AWS_DB_DATABASE:
+    local: 'eventbuizz_2_stage'
+    dev: 'eventbuizz_2_stage'
+    stage: 'eventbuizz_2_stage'
+    prod: 'eventbuizz_2_stage'
+  AWS_DB_USER:
+    local: 'eventbuizz_stage'
+    dev: 'eventbuizz_stage'
+    stage: 'eventbuizz_stage'
+    prod: 'eventbuizz_stage'
+  AWS_DB_PASSWORD:
+    local: 'QDoRoJa07TrBfhFj'
+    dev: 'QDoRoJa07TrBfhFj'
+    stage: 'QDoRoJa07TrBfhFj'
+    prod: 'QDoRoJa07TrBfhFj'

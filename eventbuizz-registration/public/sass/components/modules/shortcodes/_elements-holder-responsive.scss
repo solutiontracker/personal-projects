@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Elements Holder Responsive start style
+   ========================================================================== */
+
+$responsive-stages: (1440, 1280, 1024, 768, 600, 480);
+
+.edgtf-elements-holder {
+	@each $stage in $responsive-stages {
+		&.edgtf-responsive-mode-#{$stage} {
+			.edgtf-elements-holder-item {
+				@media only screen and (max-width: #{$stage}px) {
+					width: 100%;
+					display: block;
+					height: auto;
+				}
+
+				&.edgtf-horizontal-alignment-left {
+					@media only screen and (max-width: #{$stage}px) {
+						width: 100%;
+						display: block;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	.edgtf-elements-holder-item-content {
+		@media only screen and (max-width: 480px) {
+			padding: 0 10px;
+		}
+	}
+
+}
+
+@each $stage in $responsive-stages {
+	@media only screen and (max-width: #{$stage}px) {
+		.edgtf-elements-holder.edgtf-responsive-mode-#{$stage}.edgtf-one-column-alignment-left .edgtf-elements-holder-item .edgtf-elements-holder-item-content {
+			text-align: left;
+		}
+		.edgtf-elements-holder.edgtf-responsive-mode-#{$stage}.edgtf-one-column-alignment-right .edgtf-elements-holder-item .edgtf-elements-holder-item-content {
+			text-align: right;
+		}
+		.edgtf-elements-holder.edgtf-responsive-mode-#{$stage}.edgtf-one-column-alignment-center .edgtf-elements-holder-item .edgtf-elements-holder-item-content {
+			text-align: center;
+		}
+	}
+}
+
+/* ==========================================================================
+   End of Elements Holder Responsive style
+   ========================================================================== */

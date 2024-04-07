@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100.52" height="34.257" viewBox="0 0 100.52 34.257">
+  <g id="Group_3602" data-name="Group 3602" transform="translate(-405 -291)">
+    <g id="Group_2576" data-name="Group 2576" transform="translate(405 290.504)">
+      <g id="Rectangle_158" data-name="Rectangle 158" transform="translate(0 0.496)" fill="none" stroke="#dadfe0" stroke-width="1">
+        <rect width="100.52" height="34.257" rx="4" stroke="none"/>
+        <rect x="0.5" y="0.5" width="99.52" height="33.257" rx="3.5" fill="none"/>
+      </g>
+      <g id="Group_2572" data-name="Group 2572" transform="translate(1.761 6.127)">
+        <g id="Group_2579" data-name="Group 2579" transform="translate(38.239 5.37)">
+          <g id="Group_3" data-name="Group 3" transform="translate(0)">
+            <path id="Polygon_2" data-name="Polygon 2" d="M5.59,0l5.59,7.826H0Z" transform="translate(0 5.031)" fill="#dadfe0"/>
+            <path id="Polygon_3" data-name="Polygon 3" d="M4.752,0,9.5,6.708H0Z" transform="translate(10.621 6.149)" fill="#dadfe0"/>
+            <path id="Polygon_1" data-name="Polygon 1" d="M6.708,0l6.708,9.5H0Z" transform="translate(3.913 3.354)" fill="#bcd2d6"/>
+            <circle id="Ellipse_6" data-name="Ellipse 6" cx="2.236" cy="2.236" r="2.236" transform="translate(0.559)" fill="#dadfe0"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

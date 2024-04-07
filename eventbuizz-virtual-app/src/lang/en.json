@@ -1,0 +1,12 @@
+{
+  "_languages": "languages",
+  "LNG_ENGLISH": "English",
+  "LNG_DANISH": "Dansk",
+
+  "_general_labels": "General labels",
+  "G_NOT_SUPPORTED": "Not supported",
+  "G_GO_TO_WEB_APP": "Go to the Web App",
+  "G_MISSING_PERMISSION": "Missing permissions",
+  "G_MISSING_PERMISSION_DESCRIPTION": "This application has not been given access to your camera and microphone. If you wish to continue, you will need to allow access to your camera and microphone.",
+  "G_PLATEFORM_NOT_SUPPORTED_DESCRIPTION": "You are trying to sign in with a mobile device that is not supported by the platform. This platform supports tablets and computers. If you want to access the platform from your mobile device, use our Web App"
+}

@@ -1,0 +1,78 @@
+/* #Blog Split Column - start
+   ========================================================================== */
+
+.edgtf-blog-holder.edgtf-blog-type-split-column {
+    article:not(.format-quote):not(.format-link) {
+        .edgtf-post-content {
+            @include edgtfTableLayout();
+        }
+
+        .edgtf-post-image,
+        .edgtf-post-text{
+            display: table-cell;
+            width: 50%;
+            vertical-align:middle;
+            @include ipad-landscape {
+				width: 100%;
+				display: block;
+			}
+        }
+
+        .edgtf-post-text-inner{
+            padding-left:5px;
+        }
+
+        .edgtf-post-info-bottom{
+            margin-top:0;
+            .edgtf-post-info-bottom-right{
+                float:none;
+                width:100%;
+                text-align:left;
+            }
+        }
+        .edgtf-post-title{
+            margin-bottom:11px;
+        }
+
+    }
+
+    article {
+        &.format-link .edgtf-post-info,
+        &.format-quote .edgtf-post-info {
+            margin-bottom: 30px;
+        }
+
+        &.format-link .edgtf-post-content .edgtf-post-text,
+        &.format-quote .edgtf-post-content .edgtf-post-text {
+            padding: 30px;
+        }
+
+        &.format-link .edgtf-post-content .edgtf-post-text .edgtf-post-mark.edgtf-link-mark {
+            font-size: 80px;
+        }
+
+        &.format-quote .edgtf-post-content .edgtf-post-text .edgtf-post-mark.edgtf-quote-mark {
+            font-size: 120px;
+            top: 0;
+            right: 0;
+        }
+
+        .edgtf-post-text{
+            padding:30px;
+            @include ipad-landscape {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .edgtf-blog-audio-holder{
+        width:50%;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+}
+
+/* #Blog Split Column - end
+========================================================================== */

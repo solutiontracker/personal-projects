@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.503" height="20.5" viewBox="0 0 17.503 20.5">
+  <g id="excel" transform="translate(0.38 0.753)">
+    <path id="Path_682" data-name="Path 682" d="M19.5,3V9.169h6.169" transform="translate(-11.568 -3)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="Path_681" data-name="Path 681" d="M-22.35,518.35v-2.4l-6.168-6.169h-6.169a1.763,1.763,0,0,0-1.763,1.763v14.1a1.764,1.764,0,0,0,1.763,1.763h5.965" transform="translate(36.57 -510.034)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_1918" data-name="Group 1918" transform="translate(16.417 17.827) rotate(180)">
+      <path id="Path_677" data-name="Path 677" d="M212.225,726.176l-2.676-2.676-2.676,2.676" transform="translate(-206.873 -723.5)" fill="none" stroke="#117093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_184" data-name="Line 184" x1="0.097" y2="6.137" transform="translate(2.579 0.193)" fill="none" stroke="#117093" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <text id="x" transform="translate(2.121 15.747)" fill="#117093" font-size="14" font-family="OpenSans, Open Sans"><tspan x="0" y="0">x</tspan></text>
+  </g>
+</svg>

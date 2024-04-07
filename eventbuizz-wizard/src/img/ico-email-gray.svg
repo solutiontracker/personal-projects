@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.375" height="13.713" viewBox="0 0 26.375 13.713">
+  <g id="Group_1876" data-name="Group 1876" transform="translate(-228.5 -343.5)">
+    <g id="envelop" transform="translate(229 344)">
+      <path id="Path_648" data-name="Path 648" d="M424.154,436.642v-1.187a1.312,1.312,0,0,1,1.216-1.391H440.2a1.312,1.312,0,0,1,1.216,1.391v9.667s0,1.436-1.216,1.436l-14.831.219c-1.157,0-1.216-.9-1.216-1.339v-1.063" transform="translate(-416.042 -434.064)" fill="none" stroke="#a6aaaf" stroke-linecap="round" stroke-width="1"/>
+      <path id="Path_649" data-name="Path 649" d="M657.075,283.258l7.283,6.054a1.429,1.429,0,0,0,1.864-.057l7.246-6.091" transform="translate(-648.547 -282.916)" fill="none" stroke="#a6aaaf" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_680" data-name="Path 680" d="M0,0H9.769" transform="translate(0 3.73)" fill="none" stroke="#a6aaaf" stroke-linecap="round" stroke-width="1"/>
+      <path id="Path_681" data-name="Path 681" d="M0,0H6.366" transform="translate(3.403 6.504)" fill="none" stroke="#a6aaaf" stroke-linecap="round" stroke-width="1"/>
+      <path id="Path_682" data-name="Path 682" d="M0,0H4.468" transform="translate(5.302 9.277)" fill="none" stroke="#a6aaaf" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <line id="Line_191" data-name="Line 191" x2="7.09" y2="6.112" transform="translate(247.253 349.716)" fill="none" stroke="#a6aaaf" stroke-width="1"/>
+    <line id="Line_192" data-name="Line 192" x1="6.637" y2="6.637" transform="translate(237.297 349.716)" fill="none" stroke="#a6aaaf" stroke-width="1"/>
+  </g>
+</svg>

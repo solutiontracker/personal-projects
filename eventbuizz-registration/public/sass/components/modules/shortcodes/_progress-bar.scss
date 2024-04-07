@@ -1,0 +1,80 @@
+
+/* ==========================================================================
+   Progress bar shortcode start styles
+   ========================================================================== */
+.edgtf-progress-bar{
+    position: relative;
+    margin: 0 0 10px;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-right: 24px;
+    
+    .edgtf-progress-title-holder{
+        position: relative;
+        margin: 4px 0;
+        
+        .edgtf-progress-title{
+            display: inline-block;
+            z-index: 100;
+        }
+    }    
+    .edgtf-progress-number-wrapper  {
+        text-align: right;
+
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+        bottom: 0;
+        
+        .edgtf-progress-number {
+            display: inline-block;
+            text-align: center;
+            float: right;
+        }
+
+        .edgtf-progress-number .edgtf-percent:after{
+            content: '%';
+            margin-left: 0.1em;
+            font-size: 1em;
+        }
+        
+    }
+    .edgtf-progress-number-wrapper.edgtf-floating{
+        width: 100%;
+        height: 100%;
+        
+        .edgtf-progress-number{
+            position:absolute;
+            @include edgtfTransform(translateX(-50%));
+            bottom: 0;
+        }
+    }
+
+
+    .edgtf-progress-number-wrapper.edgtf-static {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .edgtf-progress-content-outer{
+        background-color: #d7d7d7;
+        position: relative;
+        overflow: hidden;
+        height: 5px;
+		border-radius: 5px;
+        
+        .edgtf-progress-content{
+            max-width: 100%;
+	        width:0;
+            overflow: hidden;
+            background-color: $first-main-color;
+            height: 5px;
+            box-sizing: border-box;
+			border-radius: 5px;
+        }
+    }
+}
+/* ==========================================================================
+   Progress bar shortcode end styles
+   ========================================================================== */

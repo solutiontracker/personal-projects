@@ -1,0 +1,57 @@
+
+@include laptop-landscape-only {
+	.edgtf-process-holder.edgtf-process-holder-items-five  {
+		.edgtf-process-item-holder {
+			.edgtf-pi-holder-inner {
+				padding: 0 25px;
+			}
+			.edgtf-pi-number-holder {
+				.edgtf-pi-arrow {
+					right: -40px;
+					font-size: 25px;
+				}
+			}
+		}
+		.edgtf-process-inner {
+			margin: 0 -25px;
+		}
+	}
+}
+
+@include ipad-landscape {
+	.edgtf-process-holder,
+	.edgtf-process-holder.edgtf-process-holder-items-five {
+		.edgtf-process-item-holder {
+			width: 33.33%;
+			margin-bottom: 30px;
+
+			.edgtf-pi-arrow {
+				display: none;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.edgtf-process-holder,
+	.edgtf-process-holder.edgtf-process-holder-items-three,
+	.edgtf-process-holder.edgtf-process-holder-items-five {
+		.edgtf-process-item-holder {
+			width: 50%;
+
+			.edgtf-pi-arrow {
+				display: none;
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	.edgtf-process-holder,
+	.edgtf-process-holder.edgtf-process-holder-items-three,
+	.edgtf-process-holder.edgtf-process-holder-items-five {
+		.edgtf-process-item-holder {
+			width: 100%;
+		}
+	}
+}

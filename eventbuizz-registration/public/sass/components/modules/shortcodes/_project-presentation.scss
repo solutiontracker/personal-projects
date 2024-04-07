@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Project presentation shortcode start styles
+   ========================================================================== */
+
+.edgtf-project-presentation {
+
+    img {
+        display: block;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.presentation-left,
+    &.presentation-right {
+
+        .edgtf-pp-content-holder {
+            @include edgtfTableLayout;
+
+            .edgtf-pp-content-left,
+            .edgtf-pp-content-right {
+                position: relative;
+                display: table-cell;
+                height: 100%;
+                width: 50%;
+                vertical-align: middle;
+                text-align: left;
+            }
+
+            .edgtf-pp-text-holder {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 70px 45px;
+                box-sizing: border-box;
+            }
+
+            .edgtf-pp-text-table {
+                position: relative;
+                display: table;
+                table-layout: fixed;
+                height: 100%;
+                width: 58%;
+
+                .edgtf-pp-text-cell {
+                    position: relative;
+                    display: table-cell;
+                    vertical-align: top;
+                    text-align: left;
+                }
+            }
+
+            .edgtf-pp-subtitle {
+                margin: 32px 0 0 0;
+            }
+
+            .edgtf-pp-button {
+                position: absolute;
+                bottom: 57px;
+                left: 45px;
+            }
+
+        }
+
+    }
+}
+
+/* ==========================================================================
+   Project presentation  shortcode end styles
+   ========================================================================== */

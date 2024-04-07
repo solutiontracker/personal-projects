@@ -1,0 +1,13 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+import './sass/app.scss';
+import App from './app/App.jsx';
+import registerServiceWorker from './registerServiceWorker';
+import { Provider } from 'react-redux';
+import { store } from './app/helpers';
+import './i18n';
+ReactDOM.render(<BrowserRouter><Provider store={store}><App /></Provider></BrowserRouter>, document.getElementById('root'));
+registerServiceWorker();

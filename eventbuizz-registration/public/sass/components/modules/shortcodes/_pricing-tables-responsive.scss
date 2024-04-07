@@ -1,0 +1,45 @@
+@media only screen and (min-width: $ipad-landscape) and (max-width: $laptop-landscape){
+    .edgtf-vertical-menu-area .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-table{
+		width: 48.75%;
+		margin-bottom: 45px;
+	}
+
+	.edgtf-vertical-menu-area .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-table:nth-child(2n+1){
+		margin-left: 0;
+		clear: both;
+	}
+    .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-in-table .edgtf-price {
+    	font-size: 60px; 
+    }
+}
+
+@media only screen and (max-width: $ipad-landscape){
+    .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-table {
+        width: 48.75%;
+        margin-bottom: 45px;
+    }
+
+    .edgtf-pricing-tables.edgtf-four-columns .edgtf-price-table:nth-child(2n+1) {
+        margin-left: 0;
+        clear: both;
+    }
+}
+@media only screen and (min-width: $phone-landscape) and (max-width: $ipad-portrait){
+    .edgtf-pricing-tables.edgtf-three-columns .edgtf-price-table{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width: $phone-landscape){
+    .edgtf-pricing-tables .edgtf-price-table {
+        width: 100% !important;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .edgtf-pricing-tables .edgtf-price-table.edgtf-active {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+}

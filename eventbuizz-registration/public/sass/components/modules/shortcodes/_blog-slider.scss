@@ -1,0 +1,137 @@
+/* ==========================================================================
+# Blog Slider style - begin
+========================================================================== */
+.edgtf-blog-slider{
+
+	.edgtf-blog-slide-title {
+		margin-bottom: 11px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.edgtf-blog-slide-post-info {
+		margin-bottom: 27px;
+		font-family: Montserrat, serif;
+		font-size: 12px;
+		line-height: 14px;
+		position: relative;
+		z-index: 1;
+
+		> div {
+			display: inline-block;
+			position: relative;
+			padding-right: 12px;
+			margin-right: 12px;
+			border-right: 1px solid $first-main-color;
+
+			a {
+				color: $default-text-color;
+			}
+		}
+
+		> div:last-child {
+			border-right: none;
+			margin-right: 0;
+			padding-right: 0;
+		}
+	}
+
+	.edgtf-blog-slide-excerpt {
+		margin-top: 0;
+		margin-bottom: 22px;
+	}
+
+	.edgtf-blog-slide-read-more {
+		font-family: Montserrat, serif;
+		color: #000;
+		font-weight: 500;
+		position: relative;
+		z-index: 1;
+
+		i {
+			position: relative;
+			top: -1px;
+			vertical-align: middle;
+			margin-left: 16px;
+			font-size: 28px;
+			color: $first-main-color;
+			right:0;
+			@include edgtfTransition(right .2s cubic-bezier(0.1,0,0.3,1));
+		}
+
+		&:hover{
+			i{
+				right:-6px;
+			}
+		}
+	}
+
+	.edgtf-blog-slide-image {
+		img {
+			vertical-align: middle;
+		}
+	}
+
+	.edgtf-blog-slide-info-holder {
+		padding: 70px 43px 67px 44px;
+		background-color: #fff;
+		box-shadow: $default-box-shadow;
+		border:1px solid #eaeaea;
+		position:relative;
+
+		&.edgtf-without-image::after{
+			box-shadow:0 0 12px 0 rgba(0, 0, 0, 0.15);
+			opacity:0;
+			transition: opacity 0.3s ease-in-out;
+			content:'';
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+	}
+
+/* #Blog simple slider - start
+========================================================================== */
+
+	&.edgtf-blog-slider-type-slider {
+
+
+
+	}
+/* #Blog simple slider - end
+========================================================================== */
+
+
+/* #Blog carousel - start
+========================================================================== */
+
+	&.edgtf-blog-slider-type-carousel {
+		opacity: 0;
+
+		margin: 0 -13px;
+
+		.edgtf-blog-carousel-item {
+			padding: 0 13px;
+
+			&:hover .edgtf-blog-slide-info-holder.edgtf-without-image::after{
+				opacity:1;
+			}
+		}
+	}
+
+
+
+/* #Blog carousel - end
+========================================================================== */
+
+	&.edgtf-slick-slider-navigation-style .edgtf-slick-dots li{
+		background-color:#e4e4e4;
+	}
+}
+
+/* ==========================================================================
+# Blog Slider - end
+========================================================================== */
+

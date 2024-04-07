@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.651" height="19.111" viewBox="0 0 26.651 19.111">
+  <g id="email" transform="translate(-1209.666 -1112)">
+    <g id="Rectangle_323" data-name="Rectangle 323" transform="translate(1209.666 1112)" fill="#fff" stroke="#1272bc" stroke-width="1">
+      <rect width="21" height="14" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20" height="13" rx="1.5" fill="none"/>
+    </g>
+    <path id="Path_447" data-name="Path 447" d="M709.5,411.5l8.071,6.821a2.1,2.1,0,0,0,2.872,0l8.071-6.821" transform="translate(501.028 702.224)" fill="none" stroke="#0070bc" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_55" data-name="Line 55" y1="6.033" x2="5.171" transform="translate(1210.96 1118.464)" fill="none" stroke="#0070bc" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_56" data-name="Line 56" x2="5.171" y2="6.033" transform="translate(1223.888 1118.464)" fill="none" stroke="#0070bc" stroke-linecap="round" stroke-width="1"/>
+    <path id="Path_448" data-name="Path 448" d="M2208.811,399.586s.441-4.35,2.582-6.535,5.98-2.2,5.98-2.2v-2.3l4.328,3.949-4.328,3.8v-2.262a10.189,10.189,0,0,0-5.272,1.218A10.352,10.352,0,0,0,2208.811,399.586Z" transform="translate(-989.241 731.343)" fill="#fff" stroke="#1272bc" stroke-width="1"/>
+    <path id="Path_449" data-name="Path 449" d="M2262.7,389.667l3.971,3.971-3.971,3.971" transform="translate(-1031.064 730.457)" fill="none" stroke="#1272bc" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

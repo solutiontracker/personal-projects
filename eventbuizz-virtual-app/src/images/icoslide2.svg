@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.815" height="40.046" viewBox="0 0 39.815 40.046">
+  <g id="program" transform="translate(0.08 0.5)">
+    <path id="Path_32" data-name="Path 32" d="M-76.944,406.491a4.373,4.373,0,0,1-4.391,4.356h-29.274A4.373,4.373,0,0,1-115,406.491V380.356A4.373,4.373,0,0,1-110.609,376h29.274a4.373,4.373,0,0,1,4.391,4.356" transform="translate(115 -371.382)" fill="none"/>
+    <path id="Path_33" data-name="Path 33" d="M-86.553,410.5l-23.934.005a4,4,0,0,1-4.013-3.98V380.48a4,4,0,0,1,4.013-3.98H-81.3a4,4,0,0,1,4.013,3.98v15.463" transform="translate(114.92 -371.462)" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="Path_34" data-name="Path 34" d="M-73.248,403.335v7.742h5.688" transform="translate(103.327 -377.445)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <g id="Group_11" data-name="Group 11" transform="translate(13.355 0)">
+      <line id="Line_18" data-name="Line 18" y2="8.397" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+      <line id="Line_19" data-name="Line 19" y2="8.397" transform="translate(12.595)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <line id="Line_20" data-name="Line 20" x2="28.549" transform="translate(5.555 12.572)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(20.422 20.153)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="9.656" cy="9.656" r="9.656" stroke="none"/>
+      <circle cx="9.656" cy="9.656" r="9.156" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,159 @@
+/* ==========================================================================
+   Image With Text shortcode start styles
+   ========================================================================== */
+.edgtf-image-with-text {
+	position: relative;
+  &.edgtf-image-with-text-above{
+	  .edgtf-iwt-link {
+		  position: absolute;
+		  top:0;
+		  left:0;
+		  height: 100%;
+		  width: 100%;
+		  z-index: 100;
+	  }
+
+	  .edgtf-iwt-image {
+		  @include edgtfTransition(all .2s ease .1s);
+
+		  img{
+			  vertical-align: middle;
+		  }
+	  }
+
+	  .edgtf-iwt-text-holder {
+		  position: absolute;
+		  top:0;
+		  left:0;
+		  height: 100%;
+		  width:100%;
+		  opacity: 1;
+		  background-color: transparent;
+		  -webkit-transition: -webkit-transform .2s ease .1s, opacity .2s ease .1s, background-color .3s ease;
+		  transition: transform .2s ease .1s, opacity .2s ease .1s, background-color .3s ease;
+	  }
+
+	  .edgtf-iwt-text-table {
+		  display: table;
+		  @include edgtfBoxSizing(border-box);
+		  height: 100%;
+		  width: 100%;
+		  table-layout: fixed;
+		  padding-top:24px;
+	  }
+
+	  .edgtf-iwt-text-cell {
+		  display: table-cell;
+		  vertical-align: middle;
+		  padding:0 20%;
+	  }
+
+	  .edgtf-iwt-title {
+		  @include edgtfTransition(all .2s ease .1s);
+		  color:#fff;
+		  text-transform: none;
+		  position: absolute;
+		  bottom: 0px;
+		  left: 30px;
+	  }
+
+	  .edgtf-separator-holder  {
+		  display: inline-block;
+		  vertical-align: top;
+		  width: 30px;
+		  height: 2px;
+		  bottom:5px;
+		  left:calc(50% - 15px);
+
+		  .edgtf-separator {
+			  width: 0;
+			  margin: 0;
+			  border-bottom-color:$first-main-color;
+			  @include edgtfTransition(width .2s ease);
+		  }
+	  }
+
+	  &:hover {
+		  .edgtf-iwt-image,
+		  .edgtf-iwt-title,
+		  .edgtf-iwt-text-holder {
+			  @include edgtfTransition(all .25s ease);
+			  @include edgtfTransform(translateY(-12px));
+		  }
+
+		  .edgtf-iwt-text-holder {
+			  opacity: 1;
+			  background-color: rgba(0,0,0,.3);
+			  @include edgtfBorderRadius(3px);
+		  }
+		  .edgtf-separator-holder {
+			  .edgtf-separator {
+				  @include edgtfTransition(width .2s ease .1s);
+				  width: 30px;
+			  }
+		  }
+
+	  }
+  }
+
+	&.edgtf-image-with-text-below {
+		.edgtf-link-holder{
+			position: relative;
+			margin-bottom: 15px;
+
+			.edgtf-iwt-image{
+				position: relative;
+			    @include edgtfTransition(all 0.2s ease .1s);
+			    -webkit-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+			    box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.1);
+
+				img{
+					border: 1px solid #e5e5e5;
+					vertical-align: middle;
+					@include edgtfBoxSizing(border-box);
+			    	@include edgtfTransition(all .3s);
+				}
+			}
+		}
+
+		.edgtf-iwt-title{
+			font-size: 15px;
+			text-transform: uppercase;
+			font-weight: 500;
+			margin-right: 4px;
+			display: inline-block;
+		}
+
+		.edgtf-iwt-subtitle{
+			font-size: 12px;
+			text-transform: none;
+			font-weight: 400;
+			color:$first-main-color;
+			display: inline-block;
+			font-family: $first-font;
+		}
+
+		.edgtf-iwt-link {
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			width: 100%;
+			z-index: 200;
+
+			&:hover{
+				~ .edgtf-iwt-image{
+				    @include edgtfTransition(all 0.25s ease);
+				    @include edgtfTransform(translateY(-12px));
+				    -webkit-box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.2);
+				    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
+	}
+
+}
+
+/* ==========================================================================
+   mage With Text shortcode end styles
+   ========================================================================== */

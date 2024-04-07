@@ -1,0 +1,32 @@
+/* ==========================================================================
+# Title with dots style - begin
+========================================================================== */
+
+.edgtf-title-section-holder{
+	.edgtf-section-subtitle{
+		font-family: $first-font;
+		font-weight: 400;
+		margin-top:15px;
+		font-size: 21px;
+		line-height: 36px;
+	}
+}
+.edgtf-title-with-dots {
+	position: relative;
+	overflow: hidden;
+}
+.edge-title-separator{
+	width: 57px;
+	height: 3px;
+	background-color: $first-main-color;
+	display: none;
+	margin-bottom: 14px;
+	margin-top: 10px;
+
+	&.edge-enable-separator{
+		display: inline-block;
+	}
+}
+/* ==========================================================================
+# Title with dots style - end
+========================================================================== */

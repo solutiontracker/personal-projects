@@ -1,0 +1,521 @@
+@import "../base/vars";
+
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 600px;
+$breakpoint-medium: 991px;
+
+
+body {
+  color: $white;
+  background: $wrapperbg;
+}
+
+.link,
+a {
+  color: $link;
+}
+
+.main-section {
+  padding-top: 120px;
+  &.registration-success {
+    background: $wrapperbg;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  color: $white;
+}
+
+.header {
+  background: $white;
+  box-shadow: 0 2px 15px rgba($black, 0.1);
+
+  .btn-share {
+    color: $gray;
+  }
+
+  .btn-menu {
+    color: $gray;
+  }
+}
+
+#collaspe-item {
+  address {
+    color: $gray;
+
+    a {
+      color: $gray;
+    }
+  }
+
+  p.icon {
+    i {
+      color: $gray;
+    }
+  }
+}
+.css-2b097c-container,.DayPickerInput {
+  color: $black;
+}
+.wrapper-box {
+  background: $wrapper2;
+
+  .wrapper-inner-content {
+    .header-box {
+      .required-field {
+        color: $lighttext;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    &.tab-collapse {
+      background: $darkcolor;
+
+      h3 {
+        color: $white;
+      }
+    }
+  }
+}
+
+.wrapper-select {
+  color: $gray;
+
+  .label-wrapper-select {
+    border: 1px solid $border;
+    background: $white;
+  }
+
+  .icon-right {
+    color: $border;
+  }
+
+  .btn-wrapper {
+    background: $white;
+    color: $gray;
+  }
+
+  .css-2b097c-container {
+    background: $white;
+    box-shadow: 0 0 5px rgba($black, 0.3);
+
+    .css-26l3qy-menu {
+      .css-9gakcf-option {
+        background-color: $lightgray !important;
+
+        &:hover {
+          background-color: $lightgray !important;
+        }
+      }
+
+      div[id*="react-select-3-option"] {
+        font-size: 13px;
+
+        &:hover {
+          background-color: $lightgray !important;
+        }
+      }
+
+      .css-1n7v3ny-option {
+        background-color: $lightgray !important;
+        color: $gray;
+      }
+    }
+  }
+  &.no-label {
+    .btn-wrapper {
+      color: $black;
+    }
+  }
+  &.isSelected:not(.no-label) { 
+    .btn-wrapper {
+      color: $black;
+    }
+  }
+  &.isOpen {
+    .label-wrapper-select {
+      border-color: $darkcolor;
+    }
+  }
+  &.isDisabled {
+    .label-wrapper-select {
+      border-color: $border;
+      .icon-right {
+        color: $darkcolor;
+      }
+    }
+  }
+}
+.css-c8odyh-control,
+.css-1l3nnzh-control { 
+    border-bottom: 1px solid $gray !important;
+}
+.label-input {
+  border: 1px solid $gray;
+  background: $white;
+  span {
+     color: $gray;
+  }
+  input {
+    color: $black;
+  }
+}
+.label-textarea { 
+    border: 1px solid $gray;
+    background: $white;
+    span {
+      color: $gray;
+    }
+  textarea {
+     color: $black;
+  }
+}
+.section-add-attendee {
+  p {
+    color: $gray;
+  }
+}
+.radio-check-field {
+  &.change-address {
+    label {
+      span {
+        color: $white;
+      }
+    }
+  }
+  &.inline {
+    border: 1px solid $border;
+    background: $white;
+    h5 {
+      color: $gray;
+    }
+  }
+  label {
+    color: $lighttext;
+    span:before {
+      background: $white;
+      border: 1px solid $border;
+      color: $border;
+    }
+    &.checked {
+      span:before {
+        background: $darkcolor;
+        color: $white;
+        border-color: $darkcolor;
+      }
+    }
+  }
+}
+.form-phone-field { 
+  border: 1px solid $gray;
+  background: $white;
+  &::before {
+    background: $border;
+  }
+}
+.change-address {
+  .address-field {
+    color: $lighttext;
+  }
+}
+.field-terms-services {
+  label {
+    color: $lighttext;
+    a {
+      color: $lighttext;
+    }
+  }
+}
+
+.bottom-button {
+  .btn {
+    &.btn-save-next {
+      &:disabled {
+        background: $gray;
+      }
+    }
+    &.btn-save-addmore,
+    &.btn-cancel {
+      background: $white;
+      border: 1px solid $darkcolor;
+      color: $darkcolor;
+      &:hover {
+        background: $hover;
+        color: $white;
+        border-color: $hover;
+      }
+    }
+  }
+  &.bottom-button-panel {
+    border-top: 1px solid $gray;
+  }
+}
+
+.data-wrapper-table {
+  .data-row {
+    border-top: 1px solid $gray;
+     &.footer-table {
+      border-top: 1px solid $gray;
+     }
+     .description-box {
+       .btn_checbox {
+         border: 1px solid $lightgray;
+          &.checked {
+            background: $darkcolor;
+            border-color: $darkcolor;
+            color: $white;
+          }
+       }
+       p {
+         color: $lighttext;
+       }
+     }
+     .qty-items {
+       color: $lighttext;
+     }
+  }
+  .inner-table-fields {
+    border: 1px solid $gray;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .data-row {
+      .row {
+        .theme-counter-items {
+           border: 1px solid $border;
+        }
+      }
+    }
+  }
+}
+.wrapper-date-list {
+  .btn-track-detail {
+    span {
+      color: $darkcolor;
+    }
+  }
+   .datelist-wrapper {
+    h5 {
+      background: $grayf5;
+      color: $black;
+    }
+    p {
+      color: $lighttext;
+    }
+   }
+}
+
+.theme-counter-items {
+  span {
+    color: $darkcolor;
+  }
+  input {
+    border: 1px solid $lightgray;
+  }
+}
+
+.network-cateogry-list {
+  ul {
+    li {
+      label {
+        span {
+          border: 1px solid $darkcolor;
+          color: $darkcolor;
+        }
+        input {
+          &:checked + span {
+            background: $darkcolor;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+.other-information-sec .wrapper-inner-content {
+  .top-intorduction {
+    color: $lighttext;
+  }
+  .about-yourself {
+    input {
+      border: 1px solid $lightgray;
+    }
+  }
+}
+
+.reason-doctor-visisted { 
+  border: 1px solid $lightgray;
+    h4 {
+      border-bottom: 1px solid $lightgray;
+    }
+}
+
+.generic-form {
+  textarea {
+    border: 1px solid $border;
+    color: $gray;
+  }
+}
+.custom-label-select {
+  .css-spersy-control,
+  .css-spersy-control:hover {
+    border-color: $border !important;
+  }
+}
+
+.select-date-time {
+  .DayPickerInput {
+    input {
+      border: 1px solid $gray;
+      color: $gray;
+      background-color: $white;
+    }
+  }
+}
+.label-radio {
+  span:before {
+    background: $white;
+    border: 1px solid $border;
+    color: $border;
+  }
+  input:checked + span:before {
+    content: "\e876";
+    background: $darkcolor;
+    color: $white;
+    border-color: $darkcolor;
+  }
+}
+
+.hotel-booking-section { 
+  .top-form-booking {
+    .date-booking {
+      .label-input {
+        background-color: $white;
+      }
+    }
+    .hotel-room {
+       color: $lighttext;
+      span {
+        color: $white;
+      }
+    }
+  }
+  .data-wrapper-table {
+    .data-row {
+      .col-2 {
+        span.per-night {
+          color: $lighttext;
+        }
+      }
+    }
+  }
+}
+.summry-list-section {
+  .summry-row {
+    border-top: 1px solid $gray;
+    .summry-description {
+      p {
+         color: $lighttext;
+      }
+      .icons {
+        background: $lightgray;
+      }
+    }
+    .summry-price {
+      .per-night {
+       color: $lighttext; 
+      }
+    }
+    .summry-panel {
+      @media (max-width: $breakpoint-tablet) {
+        .wrapper-panel-box {
+          background: $white;
+          border: 1px solid $lightgray;
+          span {
+            color: $darkcolor;
+          }
+        }
+      }
+    }
+  }
+}
+.payment-information {
+  color: $lighttext;
+}
+.order-table-wrapper {
+  .order-row {
+    border-top: 1px solid $gray;
+    .data-description {
+      p {
+        color: $lighttext;
+      }
+    }
+  }
+  .inner-data-table {
+    border: 1px solid $gray;
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .order-row {
+      .data-price {
+        color: $gray;
+         &.data-price-total {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+.checkout-sidebar {
+  .accept-terms {
+    p {
+      a {
+        color: $white;
+      }
+    }
+    .btn_checbox {
+      border: 1px solid $lightgray;
+      &.checked {
+        border-color: $darkcolor;
+        background: $darkcolor;
+        i {
+          color: $white;
+        }
+      }
+    }
+  }
+  @media (max-width: $breakpoint-tablet) {
+    .top-checkout-header {
+      .btn {
+        &.active {
+          border: 1px solid $darkcolor;
+          background: $white;
+          color: $darkcolor;
+        }
+      }
+    }
+  }
+}
+.checkout-form {
+  .form-rows {
+    &.total-row {
+      border-top: 1px solid $gray;
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
+
+.registration-success  {
+  .header-area {
+    p {
+      color: $gray;
+    }
+  }
+   .inner-container {
+     background: $wrapper2;
+   }
+}

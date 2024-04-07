@@ -1,0 +1,429 @@
+@import "./base/vars";
+@import "main";
+
+// loader
+@import "loader";
+
+
+.ebs-dashboard-wrapper {
+  position: relative;
+  padding-left: 300px;
+  overflow: hidden;
+  .ebs-main-sidebar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    color: $white;
+    left: 0;
+    top: 0;
+    background: $color-primary;
+    .ebs-sidebar-top {
+      padding: 0 15px 26px;
+      box-shadow: 0 4px 11px rgba($black, 0.22);
+      .ebs-logo {
+        margin-bottom: 25px;
+      }
+      .ebs-mode {
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+        .ebs-mode-title {
+          font-size: 22px;
+          font-weight: 600;
+          padding-left: 50px;
+          background: url(../img/ico-event.svg) no-repeat left center;
+        }
+      }
+    }
+    .ebs-sidebar-bottom {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      ul {
+        padding: 0 35px;
+        margin: 0;
+        list-style: none;
+        li {
+          padding: 0;
+          margin: 0;
+          border-bottom: 1px solid rgba($white,0.41);
+          &:first-child {
+            border-top: 1px solid rgba($white,0.41);
+          }
+          a {
+            display: block;
+            padding: 20px 0;
+            color: $white;
+            font-size: 18px;
+            text-decoration: none;
+            position: relative;
+            &.selected {
+              font-weight: 600;
+              &::before {
+                content: '';
+                width: 10px;
+                height: 100%;
+                position: absolute;
+                left: -35px;
+                top: 0;
+                border-radius: 0 6px 6px 0;
+                background: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ebs-pollsservey-section {
+  width: 100%;
+  display: flex;
+  &.isActive {
+    .ebs-left-section {
+      width: 40%;
+      min-width: 600px;
+      @media (max-width: 1300px) {
+        min-width: 450px;
+        .ebs-listing-wrapp .ebs-listing-panel {
+          padding: 10px 30px;
+          display: block !important;
+        }
+        .ebs-listing-wrapp .ebs-listing-panel .col-8 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+        .ebs-listing-wrapp .ebs-listing-panel .panel-elements {
+          width: 100%;
+        }
+        .ebs-listing-section .ebs-scrollbar-wrapper .ebs-list-item .left-list-box .list-bottom{
+          display: block !important;
+        }
+      }
+    }  
+  }
+}
+.ebs-left-section {
+  height: 100vh;
+  width: 100%;
+  transition: width 0.2s linear;
+  color: $white;
+  background: $color-secondary;
+  .ebs-top-header {
+    height: 98px;
+    padding: 25px 30px 18px;
+    border-bottom: 1px solid rgba($white,0.41);
+    .event-title {
+      font-size: 24px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-right: 20px;
+    }
+    .event-id {
+      font-size: 11px;
+      font-weight: 600;
+      strong {
+        font-weight: 600;
+        color: $color-primary-light;
+      }
+    }
+  }
+}
+.ebs-search-item {
+  border: 1px solid rgba($white,0.41);
+  border-radius: 5px;
+  width: 200px;
+  position: relative;
+  i {
+    position: absolute;
+    left: 6px;
+    top: 5px;
+    pointer-events: none;
+    font-size: 16px;
+    color: rgba($white,0.5);
+  }
+  input[type="text"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    height: 26px;
+    padding: 3px 10px 3px 30px;
+    color: rgba($white,0.5);
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+.ebs-search-select {
+  border: 1px solid rgba($white,0.41);
+  border-radius: 5px;
+  width: 200px;
+  position: relative;
+  overflow-y: hidden;
+  margin: 0 0 0 15px;
+  i {
+    position: absolute;
+    pointer-events: none;
+    right: 7px;
+    top: 1px;
+  }
+  select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    font: inherit;
+    /* Personalize */
+    width: 100%;
+    height: 26px;
+    padding: 0 4em 0 1em;
+    background: transparent;
+    color: rgba($white,0.5) !important;
+    border-radius: 0;
+    box-shadow: 0 0 1em 0 rgba($black, 0.2);
+    cursor: pointer;
+    /* <option> colors */
+    option {
+      color: $white;
+    }
+    /* Remove focus outline */
+    &:focus {
+      outline: none;
+    }
+    /* Remove IE arrow */
+    &::-ms-expand {
+      display: none;
+    }
+  }
+  &.ebs-form-select {
+    margin: 0;
+    width: 230px;
+    border-color: $border;
+    border-radius: 3px;
+    i {
+      color: rgba($text, 0.6);
+      top: 11px;
+    }
+    select {
+      height: 45px;
+    }
+  }
+}
+.ebs-listing-wrapp {
+  height: 100%;
+  height: calc(100% - 97px);
+  .ebs-listing-panel {
+    padding: 22px 30px;
+    border-bottom: 1px solid rgba($white,0.41);
+    .panel-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}
+.ebs-listing-section {
+  height: 100%;
+  height: calc(100% - 75px);
+  .ebs-scrollbar-wrapper {
+    padding: 40px 30px 30px;
+    border-bottom: 1px solid rgba($white,0.41);
+    .ebs-list-item {
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      border-radius: 7px;
+      border: 1px solid rgba($white,0.1);
+      cursor: pointer;
+      &:hover,&.selected {
+        background-color: rgba($gray, 0.2);
+        border-color: rgba($gray, 0.2);
+      }
+      .left-list-box {
+        width: 100%;
+        overflow: hidden;
+        .list-title {
+          font-weight: 600;
+          font-size: 16px;
+          position: relative;
+          width: 100%;
+          display: flex;
+          padding-bottom: 2px;
+          .title-wrapp {
+            display: inline-block;
+            max-width: 100%;
+            padding-right: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .list-date {
+          font-size: 12px;
+          padding-bottom: 2px;
+        }
+        .list-bottom {
+          font-size: 12px;
+          .data-created {
+            min-width: 180px;
+            strong {
+              font-weight: 600;
+            }
+          }
+          .question-numbers {
+            strong  {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .right-list-box {
+        min-width: 150px;
+        justify-content: flex-end;
+        padding-right: 5px;
+        .btn-chart {
+          cursor: pointer;
+          color: $border;
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            background: rgba($black, 0.1);
+            color: $color-primary;
+          }
+          i {
+            font-size: 28px;
+          }
+        }
+        .ebs-btn-task {
+          color: $border;
+          width: 40px;
+          height: 40px;
+          margin-left: 10px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            background: rgba($black, 0.1);
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+}
+.ebs-custom-radio {
+  position: relative;
+  cursor: pointer;
+  width: 31px;
+  height: 14px;
+  border-radius: 9px;
+  background: $lighttext;
+  &::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: $white;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+  }
+  &.active {
+    background-color: $color-primary;
+    &::before {
+      left: auto;
+      right: 1px;
+    }
+  }
+}
+.ebs-right-section {
+  width: 60%;
+  .ebs-top-header {
+    height: 98px;
+    padding: 25px 23px 15px;
+    border-bottom: 1px solid rgba($black,0.4);
+    .ebs-title {
+      font-size: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding-right: 20px;
+    }
+    .ebs-date {
+      font-size: 12px;
+    }
+    .ebs-total-question {
+      font-size: 12px;
+    }
+  }
+}
+.ebs-questions-wrapper {
+  height: 100%;
+  height: calc(100% - 98px);
+  .ebs-questions-section {
+    padding: 25px 35px;
+    .ebs-question-detail {
+      background: $white;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba($black, 0.06);
+      border-radius: 6px;
+      margin-bottom: 20px;
+      .ebs-question-header {
+        padding-bottom: 20px;
+        .ebs-title-area {
+          width: 100%;
+          overflow: hidden;
+          .ebs-title {
+            font-weight: 600;
+            font-size: 14px;
+            .ebs-required {
+              color: $error;
+            }
+          }
+        }
+        .ebs-control-panel {
+          width: 150px;
+          min-width: 150px;
+          .ebs-btn-chart {
+            margin-right: 15px;
+            cursor: pointer;
+            color: $color-secondary;
+            width: 30px;
+            height: 20px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.ebs-bordered {
+              border: 1px solid $color-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ebs-question-form {
+  .ebs-radio-check {
+    .ebs-listing {
+      position: relative;
+      padding-left: 30px;
+      color: $text;
+      padding-bottom: 25px;
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $border;
+      }
+    }
+  }
+}

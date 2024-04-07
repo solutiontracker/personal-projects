@@ -1,0 +1,49 @@
+.desktop-section-area {
+  &.app-secondry-theme {
+   .heading-lobby h2 {
+      background: none;
+      font-size: 41px;
+      font-weight: 700;
+      width: auto;
+      margin-bottom: 40px;
+   }
+  .slidebox {
+    width: 254px;
+    height: 369px;
+    &.sliboxtheme_1 {
+      background: url(../images/slidetheme1.png) no-repeat center top;
+      background-size: cover;
+    }
+    &.sliboxtheme_2 {
+      background: url(../images/slidetheme2.png) no-repeat center top;
+      background-size: cover;
+    }
+    &.sliboxtheme_3 {
+      background: url(../images/slidetheme3.png) no-repeat center top;
+      background-size: cover;
+    }
+    .app-title {
+      background: $link;
+      transform: none;
+      bottom: 6px;
+      left: 0;
+      top: auto;
+      height: 90px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      &::before {
+        display: none;
+        opacity: 0;
+      }
+      strong {
+        position: static;
+        margin: 0;
+      }
+    }
+   }
+  }
+}
