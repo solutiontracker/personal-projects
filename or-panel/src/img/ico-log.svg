@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="19.974" height="21.27" viewBox="0 0 19.974 21.27">
-  <g id="refresh_history_icon" data-name="refresh history icon" transform="translate(0.262 0.5)">
-    <path id="Path_682" data-name="Path 682" d="M19.5,3V6.572h3.643" transform="translate(-9.805 -2.747)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-    <path id="Path_681" data-name="Path 681" d="M-23.35,516.364v-3.637l-3.584-2.946h-7.753a1.763,1.763,0,0,0-1.763,1.763v14.1a1.764,1.764,0,0,0,1.763,1.763h3.233" transform="translate(36.688 -509.781)" fill="none" stroke="#117093" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-    <path id="Path_687" data-name="Path 687" d="M-21615-20993.387v3.121h2.645" transform="translate(21624.842 21004.174)" fill="none" stroke="#117093" stroke-width="1"/>
-    <path id="Icon_ionic-ios-refresh" data-name="Icon ionic-ios-refresh" d="M10.2,6.84a.407.407,0,0,0-.412.362,4.413,4.413,0,0,1-4.474,3.939,4.4,4.4,0,0,1-4.491-4.3A4.4,4.4,0,0,1,5.2,2.543a.106.106,0,0,1,.113.107V3.99a.444.444,0,0,0,.68.36l2.66-1.793a.418.418,0,0,0,0-.722L6,.066a.444.444,0,0,0-.68.36V1.643a.107.107,0,0,1-.108.107A5.205,5.205,0,0,0,0,6.843a5.207,5.207,0,0,0,5.317,5.09,5.223,5.223,0,0,0,5.3-4.664A.4.4,0,0,0,10.2,6.84Z" transform="translate(12.204 4.825) rotate(45)" fill="#117093"/>
-  </g>
-</svg>

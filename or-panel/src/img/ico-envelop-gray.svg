@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18.542" height="13.919" viewBox="0 0 18.542 13.919">
-  <g id="envelop" transform="translate(-17.438 28.025)">
-    <path id="Path_648" data-name="Path 648" d="M424.154,444.964v-9.486a1.333,1.333,0,0,1,1.235-1.413h15.071a1.333,1.333,0,0,1,1.235,1.413V445.3s0,1.459-1.235,1.459l-15.071.223c-1.176,0-1.235-.916-1.235-1.361v-1.08" transform="translate(-406.216 -461.589)" fill="none" stroke="#a6aaaf" stroke-linecap="round" stroke-width="1"/>
-    <path id="Path_649" data-name="Path 649" d="M657.075,283.259l7.4,6.152a1.453,1.453,0,0,0,1.894-.058l7.363-6.19" transform="translate(-638.714 -310.437)" fill="none" stroke="#a6aaaf" stroke-miterlimit="10" stroke-width="1"/>
-    <line id="Line_191" data-name="Line 191" x2="7.205" y2="6.211" transform="translate(28.243 -21.717)" fill="none" stroke="#a6aaaf" stroke-width="1"/>
-    <line id="Line_192" data-name="Line 192" x1="6.745" y2="6.745" transform="translate(18.125 -21.717)" fill="none" stroke="#a6aaaf" stroke-width="1"/>
-  </g>
-</svg>

@@ -1,9 +1,0 @@
-REACT_APP_API_URL=https://apistage.eventbuizz.com
-REACT_APP_BASE_URL=http://localhost:3002
-REACT_APP_EVENTCENTER_URL=https://stage.eventbuizz.com
-REACT_APP_REG_SITE_URL=https://stageeventsite.eventbuizz.com
-REACT_APP_SSL=false
-REACT_APP_ENVIRONMENT=local
-PORT=3002
-
-REACT_APP_SOCKET_SERVER=localhost:3000
